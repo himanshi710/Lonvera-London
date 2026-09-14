@@ -1,0 +1,55 @@
+:root {
+  /* =========================================
+     LONVÉRA — THE LONDON LOCAL
+     Luxury British Travel Palette
+  ========================================= */
+
+  /* Primary */
+  --aubergine: #24182f;
+  --aubergine-dark: #17101f;
+  --aubergine-soft: #34253f;
+
+  /* Light Backgrounds */
+  --porcelain: #f4f0e8;
+  --porcelain-light: #faf8f3;
+  --white: #ffffff;
+
+  /* Luxury Accent */
+  --copper: #b66a45;
+  --copper-light: #d39a78;
+  --copper-soft: #e4c2b1;
+
+  /* Secondary Accent */
+  --sage-grey: #89918a;
+  --sage-light: #b8beb8;
+  --sage-dark: #68716b;
+
+  /* Typography */
+  --text: #29262c;
+  --text-soft: #4f4a52;
+  --muted: #747078;
+  --muted-light: #9b969d;
+
+  /* Borders */
+  --border: #ded8cf;
+  --border-dark: #403747;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 35px rgba(36, 24, 47, 0.08);
+  --shadow-medium: 0 18px 50px rgba(36, 24, 47, 0.14);
+  --shadow-dark: 0 20px 60px rgba(18, 12, 24, 0.28);
+
+  /* Layout */
+  --container-width: 1280px;
+  --section-padding: 110px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  /* Transitions */
+  --transition-fast: 0.25s ease;
+  --transition: 0.4s ease;
+  --transition-slow: 0.7s ease;
+}

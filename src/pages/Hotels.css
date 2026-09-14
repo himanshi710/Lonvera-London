@@ -1,0 +1,1992 @@
+/* =========================================================
+   LONVÉRA HOTELS
+   Luxury London Editorial Stay Page
+========================================================= */
+
+.lonvera-hotels {
+  --hotel-bg: var(--porcelain, #f5f1e9);
+  --hotel-light: var(--porcelain-light, #fbf9f4);
+  --hotel-dark: var(--aubergine, #281827);
+  --hotel-copper: var(--copper, #b66a45);
+  --hotel-copper-light: var(--copper-light, #d79b78);
+  --hotel-text: var(--text, #242329);
+  --hotel-muted: var(--sage-grey, #77736d);
+  --hotel-border: var(--border, #ddd6ca);
+
+  background: var(--hotel-bg);
+  color: var(--hotel-text);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.lonvera-hotels .container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.lonvera-hotels .section {
+  padding: 120px 0;
+}
+
+.lonvera-hotels img {
+  display: block;
+  width: 100%;
+}
+
+.lonvera-hotels a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-hotels-hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #17131a;
+}
+
+.lonvera-hotels-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.lonvera-hotels-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: lonveraHotelHeroZoom 14s ease-out forwards;
+}
+
+@keyframes lonveraHotelHeroZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.lonvera-hotels-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(27, 17, 25, 0.88) 0%,
+      rgba(27, 17, 25, 0.58) 42%,
+      rgba(27, 17, 25, 0.18) 75%,
+      rgba(27, 17, 25, 0.25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(20, 13, 19, 0.75) 0%,
+      transparent 55%
+    );
+}
+
+.lonvera-hotels-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.lonvera-hotels-hero-content {
+  max-width: 800px;
+  padding-bottom: 90px;
+  color: #fff;
+}
+
+.lonvera-hotels-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.lonvera-hotels-eyebrow i {
+  width: 35px;
+  height: 1px;
+  display: block;
+  background: var(--hotel-copper-light);
+}
+
+.lonvera-hotels-hero h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(78px, 10vw, 150px);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-hotels-hero h1 em {
+  color: var(--hotel-copper-light);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lonvera-hotels-hero-content > p {
+  margin: 35px 0 30px;
+
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.lonvera-hotels-scroll {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 12px 18px 12px 20px;
+
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.lonvera-hotels-scroll i {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--hotel-copper);
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.lonvera-hotels-scroll:hover {
+  border-color: var(--hotel-copper-light);
+  color: #fff;
+}
+
+.lonvera-hotels-scroll:hover i {
+  transform: translateY(3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-hotels-intro {
+  background: var(--hotel-light);
+}
+
+.lonvera-hotels-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.lonvera-hotels-label,
+.lonvera-hotels-intro-note span,
+.lonvera-hotels-heading > div > span,
+.lonvera-hotel-styles-heading > span,
+.lonvera-hotel-feature-content > span,
+.lonvera-hotels-cta-content > span {
+  display: block;
+
+  color: var(--hotel-copper);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-hotels-intro h2 {
+  margin: 25px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6vw, 88px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-hotels-intro h2 em {
+  color: var(--hotel-copper);
+  font-style: italic;
+}
+
+.lonvera-hotels-intro-copy {
+  padding-top: 5px;
+}
+
+.lonvera-hotels-intro-copy p {
+  max-width: 570px;
+  margin: 0 0 25px;
+
+  color: var(--hotel-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.lonvera-hotels-intro-copy .lead {
+  color: var(--hotel-text);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 31px;
+  line-height: 1.15;
+}
+
+.lonvera-hotels-intro-note {
+  margin-top: 42px;
+  padding: 24px 0 0;
+
+  border-top: 1px solid var(--hotel-border);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.lonvera-hotels-intro-note strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.lonvera-hotel-collection {
+  background: var(--hotel-bg);
+  scroll-margin-top: 80px;
+}
+
+.lonvera-hotels-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.lonvera-hotels-heading h2 {
+  margin: 23px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6vw, 84px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-hotels-heading h2 em {
+  color: var(--hotel-copper);
+  font-style: italic;
+}
+
+.lonvera-hotels-heading > p {
+  margin: 0;
+
+  max-width: 480px;
+
+  color: var(--hotel-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HOTEL TABS
+========================================================= */
+
+.lonvera-hotel-tabs {
+  margin-bottom: 22px;
+
+  border-top: 1px solid var(--hotel-border);
+  border-bottom: 1px solid var(--hotel-border);
+}
+
+.lonvera-hotel-tabs-inner {
+  display: flex;
+  align-items: stretch;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.lonvera-hotel-tabs-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.lonvera-hotel-tab {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 64px;
+  padding: 0 25px;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--hotel-muted);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.lonvera-hotel-tab::after {
+  content: "";
+
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: -1px;
+
+  height: 2px;
+
+  background: transparent;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.3s ease;
+}
+
+.lonvera-hotel-tab:hover {
+  color: var(--hotel-dark);
+}
+
+.lonvera-hotel-tab.active {
+  color: #fff;
+  background: var(--hotel-dark);
+}
+
+.lonvera-hotel-tab.active::after {
+  background: var(--hotel-copper);
+  transform: scaleX(1);
+}
+
+.lonvera-hotel-tab i {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESULT BAR
+========================================================= */
+
+.lonvera-hotel-results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 25px;
+
+  color: var(--hotel-muted);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.lonvera-hotel-results strong {
+  margin-right: 8px;
+
+  color: var(--hotel-copper);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   HOTEL GRID
+========================================================= */
+
+.lonvera-hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* =========================================================
+   HOTEL CARD
+========================================================= */
+
+.lonvera-hotel-card {
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--hotel-light);
+
+  border: 1px solid var(--hotel-border);
+  border-radius: 30px;
+
+  box-shadow: 0 18px 50px rgba(35, 25, 31, 0.07);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  animation: lonveraHotelCardIn 0.5s ease both;
+}
+
+.lonvera-hotel-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.lonvera-hotel-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes lonveraHotelCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lonvera-hotel-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(182, 106, 69, 0.35);
+
+  box-shadow: 0 28px 65px rgba(35, 25, 31, 0.13);
+}
+
+
+/* =========================================================
+   HOTEL IMAGE
+========================================================= */
+
+.lonvera-hotel-image {
+  position: relative;
+
+  height: 370px;
+
+  overflow: hidden;
+
+  border-radius: 30px 30px 0 0;
+}
+
+.lonvera-hotel-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.lonvera-hotel-card:hover .lonvera-hotel-image img {
+  transform: scale(1.07);
+}
+
+.lonvera-hotel-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 15, 20, 0.55) 0%,
+      rgba(20, 15, 20, 0.03) 45%,
+      rgba(20, 15, 20, 0.7) 100%
+    );
+}
+
+.lonvera-hotel-number {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+
+  color: #fff;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+}
+
+.lonvera-hotel-category {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+
+  padding: 9px 13px;
+
+  color: #fff;
+
+  background: rgba(35, 24, 31, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
+
+  backdrop-filter: blur(10px);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.lonvera-hotel-view {
+  position: absolute;
+  right: 20px;
+  bottom: 58px;
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--hotel-copper);
+  color: #fff;
+
+  font-size: 15px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.lonvera-hotel-card:hover .lonvera-hotel-view {
+  transform: rotate(45deg);
+  background: var(--hotel-dark);
+}
+
+.lonvera-hotel-image-bottom {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.lonvera-hotel-image-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lonvera-hotel-image-bottom i {
+  color: var(--hotel-copper-light);
+}
+
+
+/* =========================================================
+   HOTEL CONTENT
+========================================================= */
+
+.lonvera-hotel-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+}
+
+.lonvera-hotel-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  color: var(--hotel-muted);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.lonvera-hotel-card-top span:last-child {
+  color: var(--hotel-copper);
+}
+
+.lonvera-hotel-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  color: var(--hotel-muted);
+
+  font-size: 11px;
+}
+
+.lonvera-hotel-location i {
+  color: var(--hotel-copper);
+}
+
+.lonvera-hotel-content h3 {
+  margin: 0 0 11px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 43px;
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.lonvera-hotel-content > p {
+  margin: 0 0 22px;
+
+  color: var(--hotel-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.lonvera-hotel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-bottom: 22px;
+}
+
+.lonvera-hotel-tags span {
+  padding: 8px 11px;
+
+  border: 1px solid rgba(182, 106, 69, 0.18);
+  border-radius: 50px;
+
+  background: rgba(182, 106, 69, 0.07);
+
+  color: var(--hotel-copper);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.lonvera-hotel-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid var(--hotel-border);
+  border-bottom: 1px solid var(--hotel-border);
+}
+
+.lonvera-hotel-details > div {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.lonvera-hotel-details > div + div {
+  padding-left: 12px;
+  border-left: 1px solid var(--hotel-border);
+}
+
+.lonvera-hotel-details i {
+  color: var(--hotel-copper);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.lonvera-hotel-details span {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  color: var(--hotel-text);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lonvera-hotel-details small {
+  color: var(--hotel-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   HOTEL BOTTOM
+========================================================= */
+
+.lonvera-hotel-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.lonvera-hotel-price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lonvera-hotel-price-wrap small {
+  color: var(--hotel-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.lonvera-hotel-price-wrap strong {
+  color: var(--hotel-dark);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.lonvera-hotel-enquire {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 0 17px;
+
+  border-radius: 50px;
+
+  background: var(--hotel-dark);
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lonvera-hotel-enquire i {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  transition: transform 0.3s ease;
+}
+
+.lonvera-hotel-enquire:hover {
+  color: #fff;
+  background: var(--hotel-copper);
+}
+
+.lonvera-hotel-enquire:hover i {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lonvera-hotel-empty {
+  padding: 80px 30px;
+
+  text-align: center;
+
+  border: 1px solid var(--hotel-border);
+  border-radius: 30px;
+
+  background: var(--hotel-light);
+}
+
+.lonvera-hotel-empty > i {
+  color: var(--hotel-copper);
+  font-size: 42px;
+}
+
+.lonvera-hotel-empty h3 {
+  margin: 20px 0 10px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.lonvera-hotel-empty p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+
+  color: var(--hotel-muted);
+  line-height: 1.7;
+}
+
+.lonvera-hotel-empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 20px;
+
+  border-radius: 50px;
+
+  background: var(--hotel-dark);
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lonvera-hotel-empty a i {
+  color: var(--hotel-copper-light);
+}
+
+
+/* =========================================================
+   HOTEL STYLES
+========================================================= */
+
+.lonvera-hotel-styles {
+  background: var(--hotel-light);
+}
+
+.lonvera-hotel-styles-heading {
+  margin-bottom: 50px;
+}
+
+.lonvera-hotel-styles-heading h2 {
+  margin: 22px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(55px, 6vw, 82px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-hotel-styles-heading h2 em {
+  color: var(--hotel-copper);
+  font-style: italic;
+}
+
+.lonvera-hotel-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.lonvera-hotel-style-card {
+  overflow: hidden;
+
+  background: var(--hotel-bg);
+
+  border: 1px solid var(--hotel-border);
+  border-radius: 28px;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.lonvera-hotel-style-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 55px rgba(35, 25, 31, 0.11);
+}
+
+.lonvera-hotel-style-image {
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+}
+
+.lonvera-hotel-style-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.lonvera-hotel-style-card:hover
+  .lonvera-hotel-style-image
+  img {
+  transform: scale(1.07);
+}
+
+.lonvera-hotel-style-image div {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(25, 18, 24, 0.55)
+  );
+}
+
+.lonvera-hotel-style-content {
+  padding: 28px;
+}
+
+.lonvera-hotel-style-content > span {
+  color: var(--hotel-copper);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+}
+
+.lonvera-hotel-style-content h3 {
+  margin: 10px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.lonvera-hotel-style-content p {
+  margin: 0 0 22px;
+
+  color: var(--hotel-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lonvera-hotel-style-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--hotel-dark);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lonvera-hotel-style-content a i {
+  color: var(--hotel-copper);
+
+  transition: transform 0.3s ease;
+}
+
+.lonvera-hotel-style-content a:hover i {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.lonvera-hotel-feature {
+  background: var(--hotel-bg);
+}
+
+.lonvera-hotel-feature-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius: 35px;
+
+  background: var(--hotel-dark);
+
+  color: #fff;
+}
+
+.lonvera-hotel-feature-image {
+  position: relative;
+  min-height: 650px;
+}
+
+.lonvera-hotel-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lonvera-hotel-feature-image > div {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(40, 24, 39, 0.45)
+  );
+}
+
+.lonvera-hotel-feature-content {
+  padding: 75px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lonvera-hotel-feature-content > span {
+  color: var(--hotel-copper-light);
+}
+
+.lonvera-hotel-feature-content h2 {
+  margin: 25px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(50px, 5vw, 74px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-hotel-feature-content h2 em {
+  color: var(--hotel-copper-light);
+  font-style: italic;
+}
+
+.lonvera-hotel-feature-content > p {
+  max-width: 520px;
+
+  margin: 0 0 25px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lonvera-hotel-feature-content ul {
+  margin: 0 0 30px;
+  padding: 0;
+
+  display: grid;
+  gap: 13px;
+
+  list-style: none;
+}
+
+.lonvera-hotel-feature-content li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 12px;
+}
+
+.lonvera-hotel-feature-content li i {
+  color: var(--hotel-copper-light);
+  font-size: 15px;
+}
+
+.lonvera-rounded-btn {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  min-height: 52px;
+
+  padding: 0 21px;
+
+  border-radius: 50px;
+
+  background: var(--hotel-copper);
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.lonvera-rounded-btn i {
+  font-size: 14px;
+}
+
+.lonvera-rounded-btn:hover {
+  color: #fff;
+  background: var(--hotel-copper-light);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.lonvera-hotel-quote {
+  padding: 135px 0;
+
+  background: var(--hotel-dark);
+
+  color: #fff;
+}
+
+.lonvera-hotel-quote-inner {
+  text-align: center;
+}
+
+.lonvera-hotel-quote-inner > span {
+  color: var(--hotel-copper-light);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-hotel-quote blockquote {
+  margin: 35px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-hotel-quote blockquote em {
+  color: var(--hotel-copper-light);
+  font-style: italic;
+}
+
+.lonvera-hotel-quote-inner > div {
+  width: 50px;
+  height: 1px;
+
+  margin: 0 auto 20px;
+
+  background: var(--hotel-copper);
+}
+
+.lonvera-hotel-quote-inner > p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lonvera-hotels-cta {
+  background: var(--hotel-bg);
+}
+
+.lonvera-hotels-cta-card {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  border-radius: 35px;
+
+  background: var(--hotel-light);
+  border: 1px solid var(--hotel-border);
+}
+
+.lonvera-hotels-cta-content {
+  padding: 75px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lonvera-hotels-cta-content h2 {
+  margin: 25px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(55px, 6vw, 82px);
+  line-height: 0.88;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.lonvera-hotels-cta-content h2 em {
+  color: var(--hotel-copper);
+  font-style: italic;
+}
+
+.lonvera-hotels-cta-content > p {
+  max-width: 500px;
+
+  margin: 0 0 30px;
+
+  color: var(--hotel-muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lonvera-hotels-cta-image {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.lonvera-hotels-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lonvera-hotels-cta-image > div {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(40, 24, 39, 0.25),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-hotels .container {
+    width: min(1100px, calc(100% - 40px));
+  }
+
+  .lonvera-hotels .section {
+    padding: 100px 0;
+  }
+
+  .lonvera-hotels-intro-grid {
+    gap: 60px;
+  }
+
+  .lonvera-hotels-heading {
+    gap: 50px;
+  }
+
+  .lonvera-hotel-image {
+    height: 330px;
+  }
+
+  .lonvera-hotel-content {
+    padding: 25px;
+  }
+
+  .lonvera-hotel-content h3 {
+    font-size: 39px;
+  }
+
+  .lonvera-hotel-feature-content {
+    padding: 55px;
+  }
+
+  .lonvera-hotels-cta-content {
+    padding: 55px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   2 CARDS
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-hotels .container {
+    width: min(920px, calc(100% - 36px));
+  }
+
+  .lonvera-hotels .section {
+    padding: 85px 0;
+  }
+
+
+  /* HERO */
+
+  .lonvera-hotels-hero {
+    min-height: 650px;
+  }
+
+  .lonvera-hotels-hero-content {
+    padding-bottom: 70px;
+  }
+
+  .lonvera-hotels-hero h1 {
+    font-size: clamp(75px, 11vw, 115px);
+  }
+
+
+  /* INTRO */
+
+  .lonvera-hotels-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+
+  /* HEADING */
+
+  .lonvera-hotels-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  /* TABS */
+
+  .lonvera-hotel-tabs-inner {
+    overflow-x: auto;
+  }
+
+  .lonvera-hotel-tab {
+    padding: 0 20px;
+  }
+
+
+  /* HOTEL GRID */
+
+  .lonvera-hotels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .lonvera-hotel-image {
+    height: 330px;
+  }
+
+  .lonvera-hotel-content h3 {
+    font-size: 39px;
+  }
+
+
+  /* STYLES */
+
+  .lonvera-hotel-style-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lonvera-hotel-style-card:last-child {
+    grid-column: span 2;
+  }
+
+
+  /* FEATURE */
+
+  .lonvera-hotel-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-hotel-feature-image {
+    min-height: 480px;
+  }
+
+  .lonvera-hotel-feature-content {
+    padding: 55px;
+  }
+
+
+  /* CTA */
+
+  .lonvera-hotels-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-hotels-cta-image {
+    min-height: 450px;
+  }
+
+  .lonvera-hotels-cta-content {
+    padding: 55px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   1 CARD
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-hotels .container {
+    width: calc(100% - 30px);
+  }
+
+  .lonvera-hotels .section {
+    padding: 70px 0;
+  }
+
+
+  /* HERO */
+
+  .lonvera-hotels-hero {
+    min-height: 570px;
+  }
+
+  .lonvera-hotels-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(27, 17, 25, 0.88),
+        rgba(27, 17, 25, 0.3)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(20, 13, 19, 0.85),
+        transparent 60%
+      );
+  }
+
+  .lonvera-hotels-hero-content {
+    padding-bottom: 55px;
+  }
+
+  .lonvera-hotels-eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .lonvera-hotels-hero h1 {
+    font-size: 76px;
+  }
+
+  .lonvera-hotels-hero-content > p {
+    margin: 28px 0;
+  }
+
+
+  /* INTRO */
+
+  .lonvera-hotels-intro h2 {
+    font-size: 55px;
+  }
+
+  .lonvera-hotels-intro-copy .lead {
+    font-size: 28px;
+  }
+
+  .lonvera-hotels-intro-note {
+    display: block;
+  }
+
+  .lonvera-hotels-intro-note strong {
+    display: block;
+    margin-top: 14px;
+  }
+
+
+  /* HEADING */
+
+  .lonvera-hotels-heading h2,
+  .lonvera-hotel-styles-heading h2 {
+    font-size: 55px;
+  }
+
+
+  /* TABS */
+
+  .lonvera-hotel-tabs {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .lonvera-hotel-tabs-inner {
+    padding: 0 10px;
+  }
+
+  .lonvera-hotel-tab {
+    min-height: 58px;
+    padding: 0 17px;
+
+    font-size: 9px;
+  }
+
+  .lonvera-hotel-tab::after {
+    left: 15px;
+    right: 15px;
+  }
+
+
+  /* RESULTS */
+
+  .lonvera-hotel-results {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* ONE CARD */
+
+  .lonvera-hotels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-hotel-card {
+    border-radius: 26px;
+  }
+
+  .lonvera-hotel-image {
+    height: 350px;
+    border-radius: 26px 26px 0 0;
+  }
+
+  .lonvera-hotel-content {
+    padding: 24px;
+  }
+
+  .lonvera-hotel-content h3 {
+    font-size: 42px;
+  }
+
+
+  /* STYLE CARDS */
+
+  .lonvera-hotel-style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-hotel-style-card:last-child {
+    grid-column: span 1;
+  }
+
+  .lonvera-hotel-style-image {
+    height: 320px;
+  }
+
+
+  /* FEATURE */
+
+  .lonvera-hotel-feature-card {
+    border-radius: 28px;
+  }
+
+  .lonvera-hotel-feature-image {
+    min-height: 380px;
+  }
+
+  .lonvera-hotel-feature-content {
+    padding: 45px 30px;
+  }
+
+  .lonvera-hotel-feature-content h2 {
+    font-size: 52px;
+  }
+
+
+  /* QUOTE */
+
+  .lonvera-hotel-quote {
+    padding: 90px 0;
+  }
+
+  .lonvera-hotel-quote blockquote {
+    font-size: 48px;
+  }
+
+
+  /* CTA */
+
+  .lonvera-hotels-cta-card {
+    border-radius: 28px;
+  }
+
+  .lonvera-hotels-cta-content {
+    padding: 45px 30px;
+  }
+
+  .lonvera-hotels-cta-content h2 {
+    font-size: 54px;
+  }
+
+  .lonvera-hotels-cta-content .lonvera-rounded-btn {
+    width: 100%;
+  }
+
+  .lonvera-hotels-cta-image {
+    min-height: 350px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .lonvera-hotels .container {
+    width: calc(100% - 24px);
+  }
+
+
+  /* HERO */
+
+  .lonvera-hotels-hero {
+    min-height: 520px;
+  }
+
+  .lonvera-hotels-hero-content {
+    padding-bottom: 42px;
+  }
+
+  .lonvera-hotels-hero h1 {
+    font-size: 64px;
+  }
+
+  .lonvera-hotels-hero-content > p {
+    font-size: 13px;
+  }
+
+  .lonvera-hotels-hero-content > p br {
+    display: none;
+  }
+
+
+  /* INTRO */
+
+  .lonvera-hotels-intro h2 {
+    font-size: 48px;
+  }
+
+  .lonvera-hotels-intro-copy p {
+    font-size: 13px;
+  }
+
+
+  /* HEADING */
+
+  .lonvera-hotels-heading h2,
+  .lonvera-hotel-styles-heading h2 {
+    font-size: 49px;
+  }
+
+
+  /* CARD */
+
+  .lonvera-hotel-image {
+    height: 310px;
+  }
+
+  .lonvera-hotel-number {
+    top: 17px;
+    left: 17px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .lonvera-hotel-category {
+    top: 18px;
+    right: 17px;
+
+    max-width: 145px;
+
+    font-size: 8px;
+  }
+
+  .lonvera-hotel-view {
+    width: 44px;
+    height: 44px;
+
+    right: 17px;
+    bottom: 54px;
+  }
+
+  .lonvera-hotel-image-bottom {
+    left: 17px;
+    right: 17px;
+    bottom: 18px;
+  }
+
+  .lonvera-hotel-image-bottom span {
+    font-size: 8px;
+  }
+
+  .lonvera-hotel-content {
+    padding: 22px;
+  }
+
+  .lonvera-hotel-card-top {
+    font-size: 8px;
+  }
+
+  .lonvera-hotel-content h3 {
+    font-size: 38px;
+  }
+
+  .lonvera-hotel-content > p {
+    font-size: 12px;
+  }
+
+
+  /* DETAILS */
+
+  .lonvera-hotel-details {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-hotel-details > div + div {
+    padding-left: 0;
+    padding-top: 12px;
+
+    border-left: 0;
+    border-top: 1px solid var(--hotel-border);
+  }
+
+
+  /* BOTTOM */
+
+  .lonvera-hotel-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .lonvera-hotel-enquire {
+    width: 100%;
+  }
+
+
+  /* STYLE */
+
+  .lonvera-hotel-style-image {
+    height: 280px;
+  }
+
+  .lonvera-hotel-style-content {
+    padding: 24px;
+  }
+
+  .lonvera-hotel-style-content h3 {
+    font-size: 32px;
+  }
+
+
+  /* FEATURE */
+
+  .lonvera-hotel-feature-image {
+    min-height: 310px;
+  }
+
+  .lonvera-hotel-feature-content {
+    padding: 38px 23px;
+  }
+
+  .lonvera-hotel-feature-content h2 {
+    font-size: 46px;
+  }
+
+  .lonvera-rounded-btn {
+    width: 100%;
+  }
+
+
+  /* QUOTE */
+
+  .lonvera-hotel-quote blockquote {
+    font-size: 42px;
+  }
+
+
+  /* CTA */
+
+  .lonvera-hotels-cta-content {
+    padding: 38px 23px;
+  }
+
+  .lonvera-hotels-cta-content h2 {
+    font-size: 47px;
+  }
+
+  .lonvera-hotels-cta-image {
+    min-height: 300px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .lonvera-hotels-hero h1 {
+    font-size: 57px;
+  }
+
+  .lonvera-hotels-intro h2,
+  .lonvera-hotels-heading h2,
+  .lonvera-hotel-styles-heading h2 {
+    font-size: 43px;
+  }
+
+  .lonvera-hotel-content h3 {
+    font-size: 34px;
+  }
+
+  .lonvera-hotel-image {
+    height: 285px;
+  }
+
+  .lonvera-hotel-quote blockquote {
+    font-size: 37px;
+  }
+
+  .lonvera-hotels-cta-content h2 {
+    font-size: 42px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.lonvera-hotel-tab:focus-visible,
+.lonvera-hotel-enquire:focus-visible,
+.lonvera-rounded-btn:focus-visible,
+.lonvera-hotels-scroll:focus-visible,
+.lonvera-hotel-style-content a:focus-visible {
+  outline: 2px solid var(--hotel-copper);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lonvera-hotel-card,
+  .lonvera-hotel-image img,
+  .lonvera-hotel-style-image img,
+  .lonvera-hotels-hero-image img {
+    animation: none;
+    transition: none;
+  }
+
+}

@@ -1,0 +1,623 @@
+/* =========================================================
+   LONVÉRA — FOOTER
+   Modern British Editorial Luxury
+========================================================= */
+
+.lonvera-footer {
+  position: relative;
+  background: var(--aubergine-dark);
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* Decorative line */
+
+.lonvera-footer::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--copper),
+      var(--copper-light),
+      var(--copper),
+      transparent
+    );
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.lonvera-footer-container {
+  width: min(100% - 60px, 1440px);
+  margin: auto;
+}
+
+/* =========================================================
+   FOOTER TOP
+========================================================= */
+
+.lonvera-footer-top {
+  padding: 90px 0 75px;
+}
+
+.lonvera-footer-top .lonvera-footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.25fr;
+  gap: 60px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.lonvera-footer-brand {
+  max-width: 350px;
+}
+
+.lonvera-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 25px;
+}
+
+.lonvera-footer-mark {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--copper);
+  border-radius: 50%;
+
+  color: var(--copper-light);
+
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  letter-spacing: -0.08em;
+}
+
+.lonvera-footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lonvera-footer-logo-text strong {
+  color: var(--white);
+
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+.lonvera-footer-logo-text small {
+  color: var(--copper-light);
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.27em;
+}
+
+.lonvera-footer-brand > p {
+  margin-bottom: 22px;
+
+  color: var(--sage-light);
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.lonvera-footer-location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--porcelain);
+
+  font-size: 11px;
+}
+
+.lonvera-footer-location i {
+  color: var(--copper-light);
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.lonvera-footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.lonvera-footer-label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.lonvera-footer-column h3 {
+  margin-bottom: 20px;
+
+  color: var(--white);
+
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.lonvera-footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.lonvera-footer-links a {
+  width: fit-content;
+
+  padding: 7px 0;
+
+  color: var(--sage-light);
+
+  font-size: 12px;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lonvera-footer-links a:hover {
+  color: var(--copper-light);
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.lonvera-footer-contact {
+  padding-left: 25px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lonvera-footer-contact h3 {
+  margin-bottom: 15px;
+
+  color: var(--white);
+
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.lonvera-footer-contact h3 em {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+.lonvera-footer-contact p {
+  max-width: 310px;
+  margin-bottom: 23px;
+
+  color: var(--sage-light);
+
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FOOTER CTA
+========================================================= */
+
+.lonvera-footer-cta {
+  width: fit-content;
+
+  min-height: 48px;
+  padding: 0 8px 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  background: var(--copper);
+  color: var(--white);
+
+  border-radius: 28px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lonvera-footer-cta i {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--aubergine);
+  color: var(--white);
+
+  transition: transform var(--transition-fast);
+}
+
+.lonvera-footer-cta:hover {
+  background: var(--copper-light);
+  color: var(--aubergine);
+  transform: translateY(-2px);
+}
+
+.lonvera-footer-cta:hover i {
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   FOOTER MIDDLE
+========================================================= */
+
+.lonvera-footer-middle {
+  padding: 30px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.lonvera-footer-middle .lonvera-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.lonvera-footer-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.lonvera-footer-newsletter .lonvera-footer-label {
+  margin-bottom: 4px;
+}
+
+.lonvera-footer-newsletter h4 {
+  color: var(--white);
+
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.lonvera-footer-email {
+  width: 310px;
+  height: 48px;
+
+  display: flex;
+
+  border: 1px solid rgba(211, 154, 120, 0.35);
+}
+
+.lonvera-footer-email input {
+  flex: 1;
+
+  min-width: 0;
+  padding: 0 15px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: var(--white);
+
+  font-size: 11px;
+}
+
+.lonvera-footer-email input::placeholder {
+  color: var(--sage-light);
+}
+
+.lonvera-footer-email button {
+  width: 48px;
+
+  background: var(--copper);
+  color: var(--white);
+
+  font-size: 12px;
+
+  transition: background var(--transition-fast);
+}
+
+.lonvera-footer-email button:hover {
+  background: var(--copper-light);
+  color: var(--aubergine);
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.lonvera-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lonvera-footer-social a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(211, 154, 120, 0.3);
+  border-radius: 50%;
+
+  color: var(--sage-light);
+
+  font-size: 13px;
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lonvera-footer-social a:hover {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.lonvera-footer-bottom {
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.lonvera-footer-bottom .lonvera-footer-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 25px;
+}
+
+.lonvera-footer-bottom p {
+  color: var(--muted-light);
+  font-size: 9px;
+}
+
+.lonvera-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.lonvera-footer-bottom-links a {
+  color: var(--sage-light);
+  font-size: 9px;
+
+  transition: color var(--transition-fast);
+}
+
+.lonvera-footer-bottom-links a:hover {
+  color: var(--copper-light);
+}
+
+.lonvera-footer-made {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--muted-light);
+
+  font-size: 9px;
+}
+
+.lonvera-footer-made i {
+  color: var(--copper);
+  font-size: 8px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .lonvera-footer-top .lonvera-footer-container {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 45px;
+  }
+
+  .lonvera-footer-contact {
+    grid-column: 1 / -1;
+
+    padding: 35px 0 0;
+
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .lonvera-footer-contact p {
+    max-width: 500px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-footer-container {
+    width: min(100% - 32px, 600px);
+  }
+
+  .lonvera-footer-top {
+    padding: 65px 0 50px;
+  }
+
+  .lonvera-footer-top .lonvera-footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .lonvera-footer-brand {
+    max-width: 100%;
+  }
+
+  .lonvera-footer-column h3 {
+    font-size: 19px;
+  }
+
+  .lonvera-footer-contact {
+    grid-column: auto;
+
+    padding: 35px 0 0;
+  }
+
+  .lonvera-footer-contact h3 {
+    font-size: 27px;
+  }
+
+  /* Newsletter */
+
+  .lonvera-footer-middle {
+    padding: 35px 0;
+  }
+
+  .lonvera-footer-middle .lonvera-footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .lonvera-footer-newsletter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .lonvera-footer-email {
+    width: 100%;
+  }
+
+  .lonvera-footer-social {
+    justify-content: flex-start;
+  }
+
+  /* Bottom */
+
+  .lonvera-footer-bottom {
+    padding: 22px 0;
+  }
+
+  .lonvera-footer-bottom .lonvera-footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .lonvera-footer-made {
+    justify-self: auto;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lonvera-footer-top {
+    padding: 55px 0 45px;
+  }
+
+  .lonvera-footer-logo-text strong {
+    font-size: 21px;
+  }
+
+  .lonvera-footer-mark {
+    width: 52px;
+    height: 52px;
+  }
+
+  .lonvera-footer-contact h3 {
+    font-size: 24px;
+  }
+
+  .lonvera-footer-bottom-links {
+    gap: 15px;
+  }
+}
+/* =========================================================
+   FOOTER BOTTOM FIX
+========================================================= */
+
+.lonvera-footer {
+  width: 100%;
+  margin: 0 !important;
+  padding-bottom: 0;
+}
+
+.lonvera-footer *,
+.lonvera-footer::before,
+.lonvera-footer::after {
+  box-sizing: border-box;
+}.lonvera-footer {
+  margin-bottom: 0 !important;
+}
+
+.lonvera-footer > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.lonvera-footer-bottom {
+  margin-bottom: 0 !important;
+}

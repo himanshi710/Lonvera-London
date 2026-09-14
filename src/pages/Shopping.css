@@ -1,0 +1,1641 @@
+/* =========================================================
+   LONVÉRA — SHOPPING
+   Luxury London Editorial Shopping Experience
+========================================================= */
+
+.lonvera-shopping {
+  --shopping-ink: var(--text, #18222c);
+  --shopping-dark: var(--aubergine, #241827);
+  --shopping-gold: var(--copper, #b66a45);
+  --shopping-gold-light: #d69b72;
+  --shopping-cream: var(--porcelain, #f5f1e9);
+  --shopping-white: #ffffff;
+  --shopping-border: var(--border, #e5ded2);
+  --shopping-muted: var(--sage-grey, #777b78);
+
+  background: var(--shopping-cream);
+  color: var(--shopping-ink);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.lonvera-shopping *,
+.lonvera-shopping *::before,
+.lonvera-shopping *::after {
+  box-sizing: border-box;
+}
+
+.lonvera-shopping img {
+  display: block;
+  width: 100%;
+}
+
+.lonvera-shopping a {
+  text-decoration: none;
+}
+
+.lonvera-shopping button {
+  font: inherit;
+}
+
+.lonvera-shopping .section {
+  position: relative;
+}
+
+.lonvera-shopping .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-shopping-hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #1e171b;
+}
+
+.lonvera-shopping-hero-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.lonvera-shopping-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: lonveraShoppingHeroZoom 14s ease-in-out infinite alternate;
+}
+
+.lonvera-shopping-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 14, 19, 0.15) 0%,
+      rgba(20, 14, 19, 0.18) 30%,
+      rgba(20, 14, 19, 0.72) 72%,
+      rgba(20, 14, 19, 0.96) 100%
+    );
+}
+
+.lonvera-shopping-hero-content {
+  max-width: 900px;
+  padding-bottom: 95px;
+  color: #fff;
+}
+
+.lonvera-shopping-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 25px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.lonvera-shopping-eyebrow i {
+  width: 34px;
+  height: 1px;
+  background: var(--shopping-gold-light);
+}
+
+.lonvera-shopping-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(82px, 11vw, 158px);
+  font-weight: 500;
+  line-height: 0.79;
+  letter-spacing: -0.055em;
+}
+
+.lonvera-shopping-hero h1 em {
+  color: #e4b48f;
+  font-weight: 400;
+}
+
+.lonvera-shopping-hero p {
+  margin: 38px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.lonvera-shopping-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 35px;
+  padding: 12px 17px 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  transition: all 0.35s ease;
+}
+
+.lonvera-shopping-scroll i {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--shopping-gold);
+  font-size: 14px;
+}
+
+.lonvera-shopping-scroll:hover {
+  border-color: var(--shopping-gold-light);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-shopping-intro {
+  padding: 125px 0 120px;
+  background: var(--shopping-cream);
+}
+
+.lonvera-shopping-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.lonvera-shopping-label {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--shopping-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-shopping-intro h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6.2vw, 88px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-shopping-intro h2 em {
+  color: var(--shopping-gold);
+  font-weight: 400;
+}
+
+.lonvera-shopping-intro-copy {
+  max-width: 610px;
+  padding-top: 14px;
+}
+
+.lonvera-shopping-intro-copy p {
+  margin: 0 0 24px;
+  color: var(--shopping-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.lonvera-shopping-intro-copy .lead {
+  color: var(--shopping-ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 31px;
+  line-height: 1.15;
+}
+
+.lonvera-shopping-stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 42px;
+  padding-top: 30px;
+  border-top: 1px solid var(--shopping-border);
+}
+
+.lonvera-shopping-stat-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lonvera-shopping-stat-row strong {
+  color: var(--shopping-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lonvera-shopping-stat-row span {
+  color: var(--shopping-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   SHOPPING EDIT
+========================================================= */
+
+.lonvera-shopping-edit {
+  padding: 120px 0 135px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(182, 106, 69, 0.055),
+      transparent 30%
+    ),
+    var(--shopping-white);
+}
+
+.lonvera-shopping-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.62fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 52px;
+}
+
+.lonvera-shopping-heading > div > span,
+.lonvera-shopping-styles-heading > span {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--shopping-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.lonvera-shopping-heading h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-shopping-heading h2 em {
+  color: var(--shopping-gold);
+  font-weight: 400;
+}
+
+.lonvera-shopping-heading > p {
+  max-width: 510px;
+  margin: 0;
+  color: var(--shopping-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   FILTER TABS
+========================================================= */
+
+.lonvera-shopping-filters {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 7px;
+  border: 1px solid var(--shopping-border);
+  border-radius: 18px;
+  background: #f8f5ef;
+}
+
+.lonvera-shopping-filters-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lonvera-shopping-filters-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.lonvera-shopping-filters button {
+  flex: 0 0 auto;
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: transparent;
+  color: #676862;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  white-space: nowrap;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lonvera-shopping-filters button:hover {
+  color: var(--shopping-gold);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.lonvera-shopping-filters button.active {
+  color: #fff;
+  background: var(--shopping-dark);
+  border-color: var(--shopping-dark);
+  box-shadow: 0 9px 24px rgba(36, 24, 39, 0.18);
+}
+
+.lonvera-shopping-filters button.active:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.lonvera-shopping-filters button i {
+  font-size: 13px;
+  color: #e2b28d;
+}
+
+
+/* =========================================================
+   RESULT BAR
+========================================================= */
+
+.lonvera-shopping-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 4px 28px;
+  color: #92928c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.lonvera-shopping-results strong {
+  margin-right: 7px;
+  color: var(--shopping-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   SHOPPING GRID
+========================================================= */
+
+.lonvera-shopping-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   SHOPPING CARD
+========================================================= */
+
+.lonvera-shopping-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(181, 166, 147, 0.3);
+  border-radius: 30px;
+  background: #f9f5ed;
+  box-shadow:
+    0 15px 45px rgba(37, 26, 31, 0.07),
+    0 2px 7px rgba(37, 26, 31, 0.03);
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+  animation: lonveraShoppingCardIn 0.5s ease both;
+}
+
+.lonvera-shopping-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(182, 106, 69, 0.45);
+  box-shadow:
+    0 28px 65px rgba(37, 26, 31, 0.13),
+    0 5px 15px rgba(37, 26, 31, 0.05);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.lonvera-shopping-card-image {
+  position: relative;
+  height: 325px;
+  overflow: hidden;
+  background: #292229;
+}
+
+.lonvera-shopping-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.75, 0.2, 1),
+    filter 0.6s ease;
+}
+
+.lonvera-shopping-card:hover
+.lonvera-shopping-card-image img {
+  transform: scale(1.08);
+  filter: saturate(1.08);
+}
+
+.lonvera-shopping-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 13, 17, 0.35) 0%,
+      transparent 40%,
+      rgba(18, 13, 17, 0.72) 100%
+    );
+}
+
+.lonvera-shopping-card-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  min-width: 47px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  background: rgba(26, 20, 24, 0.46);
+  color: #fff;
+  backdrop-filter: blur(12px);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+}
+
+.lonvera-shopping-card-category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+  background: rgba(25, 19, 23, 0.5);
+  color: #fff;
+  backdrop-filter: blur(13px);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.lonvera-shopping-card-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  width: 49px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: var(--shopping-gold);
+  color: #fff;
+  font-size: 17px;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.lonvera-shopping-card:hover .lonvera-shopping-card-arrow {
+  transform: rotate(45deg);
+  background: var(--shopping-dark);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.lonvera-shopping-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 27px 27px 25px;
+}
+
+.lonvera-shopping-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 22px;
+}
+
+.lonvera-shopping-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--shopping-gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lonvera-shopping-location i {
+  font-size: 13px;
+}
+
+.lonvera-shopping-card-mini {
+  color: #99978f;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.lonvera-shopping-card-content h3 {
+  margin: 14px 0 9px;
+  color: var(--shopping-ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  transition: color 0.3s ease;
+}
+
+.lonvera-shopping-card:hover
+.lonvera-shopping-card-content h3 {
+  color: var(--shopping-gold);
+}
+
+.lonvera-shopping-card-content p {
+  margin: 0;
+  color: #70736f;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.lonvera-shopping-card-line {
+  width: 100%;
+  height: 1px;
+  margin: 23px 0 20px;
+  background: var(--shopping-border);
+}
+
+.lonvera-shopping-card-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: auto;
+  color: var(--shopping-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lonvera-shopping-card-content a i {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--shopping-border);
+  border-radius: 50%;
+  color: var(--shopping-gold);
+  transition: all 0.3s ease;
+}
+
+.lonvera-shopping-card-content a:hover {
+  color: var(--shopping-gold);
+}
+
+.lonvera-shopping-card-content a:hover i {
+  color: #fff;
+  background: var(--shopping-gold);
+  border-color: var(--shopping-gold);
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lonvera-shopping-empty {
+  padding: 75px 30px;
+  border: 1px solid var(--shopping-border);
+  border-radius: 30px;
+  background: #faf7f1;
+  text-align: center;
+}
+
+.lonvera-shopping-empty > i {
+  color: var(--shopping-gold);
+  font-size: 38px;
+}
+
+.lonvera-shopping-empty h3 {
+  margin: 20px 0 10px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.lonvera-shopping-empty p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  color: var(--shopping-muted);
+  line-height: 1.8;
+}
+
+.lonvera-shopping-empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--shopping-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SHOPPING STYLES
+========================================================= */
+
+.lonvera-shopping-styles {
+  padding: 120px 0 130px;
+  background: var(--shopping-cream);
+}
+
+.lonvera-shopping-styles-heading {
+  margin-bottom: 55px;
+}
+
+.lonvera-shopping-styles-heading h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(56px, 6vw, 84px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-shopping-styles-heading h2 em {
+  color: var(--shopping-gold);
+  font-weight: 400;
+}
+
+.lonvera-shopping-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.lonvera-shopping-style-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--shopping-white);
+  box-shadow: 0 14px 40px rgba(38, 29, 32, 0.07);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.lonvera-shopping-style-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(38, 29, 32, 0.12);
+}
+
+.lonvera-shopping-style-image {
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+}
+
+.lonvera-shopping-style-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.lonvera-shopping-style-card:hover
+.lonvera-shopping-style-image img {
+  transform: scale(1.07);
+}
+
+.lonvera-shopping-style-image div {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(30, 22, 28, 0.4)
+  );
+}
+
+.lonvera-shopping-style-content {
+  padding: 29px;
+}
+
+.lonvera-shopping-style-content > span {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--shopping-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+}
+
+.lonvera-shopping-style-content h3 {
+  margin: 0 0 12px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.lonvera-shopping-style-content p {
+  margin: 0 0 24px;
+  color: var(--shopping-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.lonvera-shopping-style-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--shopping-dark);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lonvera-shopping-style-content a i {
+  color: var(--shopping-gold);
+  transition: transform 0.3s ease;
+}
+
+.lonvera-shopping-style-content a:hover {
+  color: var(--shopping-gold);
+}
+
+.lonvera-shopping-style-content a:hover i {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.lonvera-shopping-feature {
+  padding: 120px 0;
+  background: var(--shopping-white);
+}
+
+.lonvera-shopping-feature-card {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  min-height: 690px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: var(--shopping-dark);
+  box-shadow: 0 30px 80px rgba(36, 24, 39, 0.14);
+}
+
+.lonvera-shopping-feature-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.lonvera-shopping-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.lonvera-shopping-feature-card:hover
+.lonvera-shopping-feature-image img {
+  transform: scale(1.04);
+}
+
+.lonvera-shopping-feature-image > div {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 55%,
+      rgba(36, 24, 39, 0.5)
+    );
+}
+
+.lonvera-shopping-feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px;
+  color: #fff;
+}
+
+.lonvera-shopping-feature-content > span {
+  margin-bottom: 22px;
+  color: #d9a27c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-shopping-feature-content h2 {
+  margin: 0 0 27px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(55px, 5.3vw, 78px);
+  font-weight: 500;
+  line-height: 0.87;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-shopping-feature-content h2 em {
+  color: #d9a27c;
+  font-weight: 400;
+}
+
+.lonvera-shopping-feature-content > p {
+  max-width: 510px;
+  margin: 0 0 30px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.lonvera-shopping-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 22px;
+  margin-bottom: 35px;
+}
+
+.lonvera-shopping-feature-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+}
+
+.lonvera-shopping-feature-list i {
+  color: #d9a27c;
+  font-size: 14px;
+}
+
+.lonvera-shopping-feature-content .lonvera-rounded-btn {
+  align-self: flex-start;
+}
+
+
+/* =========================================================
+   COMMON ROUNDED BUTTON
+========================================================= */
+
+.lonvera-shopping .lonvera-rounded-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  min-height: 52px;
+  padding: 0 22px 0 25px;
+  border: 1px solid var(--shopping-gold);
+  border-radius: 50px;
+  background: var(--shopping-gold);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+}
+
+.lonvera-shopping .lonvera-rounded-btn i {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lonvera-shopping .lonvera-rounded-btn:hover {
+  color: var(--shopping-dark);
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+.lonvera-shopping .lonvera-rounded-btn:hover i {
+  color: #fff;
+  background: var(--shopping-gold);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.lonvera-shopping-quote {
+  padding: 135px 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(217, 162, 124, 0.08),
+      transparent 35%
+    ),
+    var(--shopping-dark);
+  color: #fff;
+  text-align: center;
+}
+
+.lonvera-shopping-quote-inner {
+  max-width: 950px;
+  margin: auto;
+}
+
+.lonvera-shopping-quote-inner > span {
+  color: #d9a27c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.lonvera-shopping-quote blockquote {
+  margin: 35px auto;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-shopping-quote blockquote em {
+  color: #d9a27c;
+  font-weight: 400;
+}
+
+.lonvera-shopping-quote-inner > div {
+  width: 55px;
+  height: 1px;
+  margin: 30px auto;
+  background: #d9a27c;
+}
+
+.lonvera-shopping-quote-inner > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lonvera-shopping-cta {
+  padding: 120px 0;
+  background: var(--shopping-cream);
+}
+
+.lonvera-shopping-cta-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #f9f5ed;
+  box-shadow: 0 28px 75px rgba(40, 30, 33, 0.1);
+}
+
+.lonvera-shopping-cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px;
+}
+
+.lonvera-shopping-cta-content > span {
+  margin-bottom: 23px;
+  color: var(--shopping-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-shopping-cta-content h2 {
+  margin: 0 0 28px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 5.8vw, 84px);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.lonvera-shopping-cta-content h2 em {
+  color: var(--shopping-gold);
+  font-weight: 400;
+}
+
+.lonvera-shopping-cta-content p {
+  max-width: 500px;
+  margin: 0 0 32px;
+  color: var(--shopping-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.lonvera-shopping-cta-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.lonvera-shopping-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.lonvera-shopping-cta-card:hover
+.lonvera-shopping-cta-image img {
+  transform: scale(1.045);
+}
+
+.lonvera-shopping-cta-image > div {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 245, 237, 0.18),
+    transparent 35%
+  );
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes lonveraShoppingHeroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.055);
+  }
+}
+
+@keyframes lonveraShoppingCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-shopping-hero {
+    min-height: 700px;
+  }
+
+  .lonvera-shopping-intro-grid {
+    gap: 65px;
+  }
+
+  .lonvera-shopping-heading {
+    gap: 50px;
+  }
+
+  .lonvera-shopping-card-image {
+    height: 295px;
+  }
+
+  .lonvera-shopping-card-content {
+    padding: 24px;
+  }
+
+  .lonvera-shopping-card-content h3 {
+    font-size: 34px;
+  }
+
+  .lonvera-shopping-feature-content {
+    padding: 55px;
+  }
+
+  .lonvera-shopping-cta-content {
+    padding: 55px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — 2 CARDS
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-shopping-hero {
+    min-height: 650px;
+  }
+
+  .lonvera-shopping-hero-content {
+    padding-bottom: 75px;
+  }
+
+  .lonvera-shopping-intro {
+    padding: 90px 0;
+  }
+
+  .lonvera-shopping-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .lonvera-shopping-intro-copy {
+    max-width: 720px;
+  }
+
+  .lonvera-shopping-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .lonvera-shopping-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lonvera-shopping-card-image {
+    height: 320px;
+  }
+
+  .lonvera-shopping-style-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lonvera-shopping-style-card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    width: 100%;
+    justify-self: center;
+  }
+
+  .lonvera-shopping-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-shopping-feature-image {
+    min-height: 500px;
+  }
+
+  .lonvera-shopping-feature-content {
+    padding: 60px;
+  }
+
+  .lonvera-shopping-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-shopping-cta-image {
+    min-height: 450px;
+  }
+
+  .lonvera-shopping-cta-content {
+    padding: 60px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 1 CARD
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-shopping-hero {
+    min-height: 590px;
+  }
+
+  .lonvera-shopping-hero-content {
+    padding-bottom: 58px;
+  }
+
+  .lonvera-shopping-hero h1 {
+    font-size: 78px;
+    line-height: 0.82;
+  }
+
+  .lonvera-shopping-hero p {
+    margin-top: 27px;
+    font-size: 14px;
+  }
+
+  .lonvera-shopping-hero p br {
+    display: none;
+  }
+
+  .lonvera-shopping-intro {
+    padding: 75px 0;
+  }
+
+  .lonvera-shopping-intro h2 {
+    font-size: 57px;
+  }
+
+  .lonvera-shopping-intro-copy .lead {
+    font-size: 27px;
+  }
+
+  .lonvera-shopping-stat-row {
+    margin-top: 30px;
+  }
+
+  .lonvera-shopping-edit {
+    padding: 80px 0 90px;
+  }
+
+  .lonvera-shopping-heading h2 {
+    font-size: 57px;
+  }
+
+  .lonvera-shopping-heading > p {
+    font-size: 14px;
+  }
+
+  .lonvera-shopping-filters {
+    border-radius: 15px;
+    padding: 6px;
+  }
+
+  .lonvera-shopping-filters button {
+    min-height: 45px;
+    padding: 0 16px;
+    font-size: 9px;
+  }
+
+  .lonvera-shopping-results {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 23px;
+  }
+
+  .lonvera-shopping-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .lonvera-shopping-card-image {
+    height: 350px;
+  }
+
+  .lonvera-shopping-card-content {
+    padding: 25px;
+  }
+
+  .lonvera-shopping-card-content h3 {
+    font-size: 39px;
+  }
+
+  .lonvera-shopping-card-content p {
+    font-size: 13px;
+  }
+
+  .lonvera-shopping-styles {
+    padding: 80px 0;
+  }
+
+  .lonvera-shopping-styles-heading {
+    margin-bottom: 35px;
+  }
+
+  .lonvera-shopping-styles-heading h2 {
+    font-size: 56px;
+  }
+
+  .lonvera-shopping-style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-shopping-style-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .lonvera-shopping-style-image {
+    height: 310px;
+  }
+
+  .lonvera-shopping-feature {
+    padding: 80px 0;
+  }
+
+  .lonvera-shopping-feature-image {
+    min-height: 360px;
+  }
+
+  .lonvera-shopping-feature-content {
+    padding: 45px 28px;
+  }
+
+  .lonvera-shopping-feature-content h2 {
+    font-size: 55px;
+  }
+
+  .lonvera-shopping-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-shopping-feature-content .lonvera-rounded-btn {
+    width: 100%;
+  }
+
+  .lonvera-shopping-quote {
+    padding: 90px 0;
+  }
+
+  .lonvera-shopping-quote blockquote {
+    font-size: 49px;
+  }
+
+  .lonvera-shopping-quote blockquote br {
+    display: none;
+  }
+
+  .lonvera-shopping-cta {
+    padding: 80px 0;
+  }
+
+  .lonvera-shopping-cta-content {
+    padding: 48px 28px;
+  }
+
+  .lonvera-shopping-cta-content h2 {
+    font-size: 56px;
+  }
+
+  .lonvera-shopping-cta-content .lonvera-rounded-btn {
+    width: 100%;
+  }
+
+  .lonvera-shopping-cta-image {
+    min-height: 350px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .lonvera-shopping-hero {
+    min-height: 540px;
+  }
+
+  .lonvera-shopping-hero h1 {
+    font-size: 64px;
+  }
+
+  .lonvera-shopping-hero-content {
+    padding-bottom: 48px;
+  }
+
+  .lonvera-shopping-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.17em;
+  }
+
+  .lonvera-shopping-eyebrow i {
+    width: 25px;
+  }
+
+  .lonvera-shopping-scroll {
+    margin-top: 27px;
+    font-size: 9px;
+  }
+
+  .lonvera-shopping-intro h2,
+  .lonvera-shopping-heading h2,
+  .lonvera-shopping-styles-heading h2 {
+    font-size: 49px;
+  }
+
+  .lonvera-shopping-intro-grid {
+    gap: 35px;
+  }
+
+  .lonvera-shopping-stat-row strong {
+    font-size: 41px;
+  }
+
+  .lonvera-shopping-card {
+    border-radius: 25px;
+  }
+
+  .lonvera-shopping-card-image {
+    height: 315px;
+  }
+
+  .lonvera-shopping-card-number {
+    top: 15px;
+    left: 15px;
+  }
+
+  .lonvera-shopping-card-category {
+    top: 15px;
+    right: 15px;
+    font-size: 7px;
+  }
+
+  .lonvera-shopping-card-arrow {
+    right: 15px;
+    bottom: 15px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lonvera-shopping-card-content {
+    padding: 23px;
+  }
+
+  .lonvera-shopping-card-mini {
+    display: none;
+  }
+
+  .lonvera-shopping-card-content h3 {
+    font-size: 36px;
+  }
+
+  .lonvera-shopping-style-card {
+    border-radius: 24px;
+  }
+
+  .lonvera-shopping-style-content {
+    padding: 24px;
+  }
+
+  .lonvera-shopping-style-content h3 {
+    font-size: 31px;
+  }
+
+  .lonvera-shopping-feature-card {
+    border-radius: 27px;
+  }
+
+  .lonvera-shopping-feature-content {
+    padding: 42px 24px;
+  }
+
+  .lonvera-shopping-feature-content h2 {
+    font-size: 49px;
+  }
+
+  .lonvera-shopping-feature-image {
+    min-height: 310px;
+  }
+
+  .lonvera-shopping-quote blockquote {
+    font-size: 43px;
+  }
+
+  .lonvera-shopping-cta-card {
+    border-radius: 27px;
+  }
+
+  .lonvera-shopping-cta-content {
+    padding: 42px 24px;
+  }
+
+  .lonvera-shopping-cta-content h2 {
+    font-size: 49px;
+  }
+
+  .lonvera-shopping-cta-image {
+    min-height: 290px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .lonvera-shopping-hero h1 {
+    font-size: 57px;
+  }
+
+  .lonvera-shopping-intro h2,
+  .lonvera-shopping-heading h2,
+  .lonvera-shopping-styles-heading h2 {
+    font-size: 44px;
+  }
+
+  .lonvera-shopping-card-image {
+    height: 285px;
+  }
+
+  .lonvera-shopping-card-content h3 {
+    font-size: 33px;
+  }
+
+  .lonvera-shopping-feature-content h2,
+  .lonvera-shopping-cta-content h2 {
+    font-size: 44px;
+  }
+
+  .lonvera-shopping-quote blockquote {
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lonvera-shopping *,
+  .lonvera-shopping *::before,
+  .lonvera-shopping *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

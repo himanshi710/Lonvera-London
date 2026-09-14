@@ -1,0 +1,1697 @@
+/* =========================================================
+   LONVÉRA — DESTINATIONS
+   Modern British Editorial Luxury
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.lonvera-destinations {
+  width: 100%;
+  overflow: hidden;
+  background: var(--porcelain);
+  color: var(--text);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-destinations-hero {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  height: 88vh;
+  overflow: hidden;
+  background: var(--aubergine);
+}
+
+.lonvera-destinations-hero img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.02);
+}
+
+.lonvera-destinations-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(36, 24, 47, 0.88) 0%,
+      rgba(36, 24, 47, 0.58) 38%,
+      rgba(36, 24, 47, 0.16) 75%,
+      rgba(36, 24, 47, 0.28) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(23, 16, 31, 0.78) 0%,
+      transparent 50%
+    );
+}
+
+.lonvera-destinations-hero .container {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+}
+
+.lonvera-destinations-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 700px;
+  height: 100%;
+
+  max-width: 720px;
+  padding: 100px 0 70px;
+}
+
+.lonvera-destinations-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+  margin-bottom: 24px;
+
+  color: var(--copper-light);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.lonvera-destinations-eyebrow i {
+  width: 34px;
+  height: 1px;
+
+  display: block;
+
+  background: var(--copper);
+}
+
+.lonvera-destinations-hero h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(70px, 9vw, 145px);
+  font-weight: 600;
+  line-height: 0.78;
+  letter-spacing: -0.055em;
+}
+
+.lonvera-destinations-hero h1 em {
+  color: var(--copper-light);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lonvera-destinations-hero p {
+  margin: 35px 0 0;
+
+  max-width: 500px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.lonvera-destination-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  width: fit-content;
+
+  margin-top: 40px;
+  padding: 7px 7px 7px 20px;
+
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-destination-scroll span {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--copper);
+  color: var(--white);
+
+  transition: transform var(--transition);
+}
+
+.lonvera-destination-scroll:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--copper);
+  transform: translateY(-3px);
+}
+
+.lonvera-destination-scroll:hover span {
+  transform: translateY(3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-destinations-intro {
+  padding: 115px 0;
+
+  background: var(--porcelain-light);
+}
+
+.lonvera-destinations-intro-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.lonvera-destinations-label {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  color: var(--copper);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.lonvera-destinations-intro h2 {
+  margin: 0;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.lonvera-destinations-intro h2 em {
+  color: var(--copper);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lonvera-destinations-intro-copy {
+  max-width: 500px;
+}
+
+.lonvera-destinations-intro-copy p {
+  margin: 0 0 22px;
+
+  color: var(--text-soft);
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.lonvera-destinations-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DESTINATION LIST
+========================================================= */
+
+.lonvera-destination-list {
+  position: relative;
+
+  padding: 115px 0 110px;
+
+  background: var(--porcelain);
+}
+
+.lonvera-destination-list .lonvera-section-title {
+  margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.lonvera-destination-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+
+  margin-bottom: 38px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--border);
+  border-radius: 22px;
+
+  box-shadow: var(--shadow-soft);
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lonvera-destination-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.lonvera-destination-tab {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 17px;
+
+  border: 1px solid transparent;
+  border-radius: 50px;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color var(--transition),
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-destination-tab > i {
+  font-size: 13px;
+}
+
+.lonvera-destination-tab b {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 2px;
+
+  border-radius: 50%;
+
+  background: var(--copper);
+  color: var(--white);
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.lonvera-destination-tab:hover {
+  color: var(--aubergine);
+
+  background: var(--porcelain);
+
+  transform: translateY(-2px);
+}
+
+.lonvera-destination-tab.active {
+  color: var(--white);
+
+  background: var(--aubergine);
+
+  border-color: var(--aubergine);
+
+  box-shadow: 0 8px 20px rgba(36, 24, 47, 0.16);
+}
+
+.lonvera-destination-tab.active:hover {
+  color: var(--white);
+  background: var(--aubergine);
+}
+
+
+/* =========================================================
+   RESULT BAR
+========================================================= */
+
+.lonvera-destination-results {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+.lonvera-result-count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  flex: 0 0 auto;
+}
+
+.lonvera-result-count strong {
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.lonvera-result-count span,
+.lonvera-result-area {
+  color: var(--muted);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lonvera-result-line {
+  width: 100%;
+  height: 1px;
+
+  background: var(--border);
+}
+
+.lonvera-result-area {
+  flex: 0 0 auto;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CARD GRID — IMPORTANT FIX
+========================================================= */
+
+.lonvera-destination-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  width: 100%;
+  height: auto;
+  min-height: 0;
+
+  align-items: stretch;
+
+  clear: both;
+}
+
+
+/* =========================================================
+   DESTINATION CARD
+========================================================= */
+
+.lonvera-destination-grid .lonvera-destination-card {
+    border: none !important;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 540px;
+  min-height: 540px;
+  max-height: 540px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+
+  border: 1px solid rgba(36, 24, 47, 0.2);
+  border-radius: 26px;
+
+  color: var(--white);
+  text-decoration: none;
+
+  box-shadow:
+    0 14px 35px rgba(36, 24, 47, 0.09),
+    0 2px 8px rgba(36, 24, 47, 0.05);
+
+  transform: translateZ(0);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.lonvera-destination-grid .lonvera-destination-card:hover {
+  color: var(--white);
+
+  transform: translateY(-8px);
+
+  border-color: rgba(182, 106, 69, 0.55);
+
+  box-shadow:
+    0 28px 55px rgba(36, 24, 47, 0.19),
+    0 8px 20px rgba(182, 106, 69, 0.08);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.lonvera-destination-card-image {
+  position: relative;
+
+  width: 100%;
+  height: 480px;
+  min-height: 480px;
+  max-height: 480px;
+
+  flex: 0 0 480px;
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+}
+
+.lonvera-destination-card-image img {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.001);
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lonvera-destination-card:hover
+.lonvera-destination-card-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   CARD GRADIENT
+========================================================= */
+
+.lonvera-card-gradient {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(23, 16, 31, 0.08) 0%,
+      rgba(23, 16, 31, 0.02) 30%,
+      rgba(23, 16, 31, 0.28) 52%,
+      rgba(23, 16, 31, 0.94) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.lonvera-card-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 3;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+
+  background: rgba(36, 24, 47, 0.42);
+
+  color: var(--white);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-destination-card:hover .lonvera-card-number {
+  background: var(--copper);
+  border-color: var(--copper);
+
+  transform: rotate(-6deg);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.lonvera-card-category {
+  position: absolute;
+
+  top: 22px;
+  right: 18px;
+
+  z-index: 3;
+
+  max-width: 110px;
+
+  padding: 9px 13px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+
+  background: rgba(36, 24, 47, 0.45);
+
+  color: var(--white);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.lonvera-card-arrow {
+  position: absolute;
+
+  top: 78px;
+  right: 18px;
+
+  z-index: 3;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+
+  background: rgba(36, 24, 47, 0.35);
+
+  color: var(--white);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 15px;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-destination-card:hover .lonvera-card-arrow {
+  background: var(--copper);
+  border-color: var(--copper);
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   IMAGE CONTENT
+========================================================= */
+
+.lonvera-card-image-content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 3;
+
+  padding: 28px 20px 25px;
+}
+
+.lonvera-card-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lonvera-card-location i {
+  font-size: 11px;
+}
+
+.lonvera-card-image-content h3 {
+  margin: 0 0 9px;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(30px, 2.3vw, 38px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.lonvera-card-image-content p {
+  display: -webkit-box;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 11px;
+  line-height: 1.55;
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   CARD BOTTOM BAR
+========================================================= */
+
+.lonvera-card-bottom {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
+
+  flex: 0 0 60px;
+
+  padding: 0 20px;
+
+  background: var(--aubergine-dark);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+}
+
+.lonvera-card-bottom > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  transition: gap var(--transition);
+}
+
+.lonvera-card-bottom > span i {
+  font-size: 11px;
+}
+
+.lonvera-destination-card:hover
+.lonvera-card-bottom > span {
+  gap: 14px;
+}
+
+.lonvera-card-bottom small {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   EDITORIAL SECTION
+   MUST STAY BELOW GRID
+========================================================= */
+
+.lonvera-destinations-editorial {
+  position: relative;
+
+  clear: both;
+
+  width: 100%;
+
+  margin-top: 0;
+
+  padding: 0 0 115px;
+
+  background: var(--porcelain);
+
+  z-index: 1;
+}
+
+.lonvera-editorial-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  width: 100%;
+  min-height: 510px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background: var(--aubergine);
+
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-editorial-image {
+  position: relative;
+
+  width: 100%;
+  height: 510px;
+
+  overflow: hidden;
+}
+
+.lonvera-editorial-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(36, 24, 47, 0.2)
+    );
+}
+
+.lonvera-editorial-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.lonvera-editorial-card:hover
+.lonvera-editorial-image img {
+  transform: scale(1.04);
+}
+
+.lonvera-editorial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 65px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(182, 106, 69, 0.12),
+      transparent 30%
+    ),
+    var(--aubergine);
+}
+
+.lonvera-editorial-content > span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lonvera-editorial-content h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(50px, 5vw, 78px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-editorial-content h2 em {
+  color: var(--copper-light);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lonvera-editorial-content p {
+  max-width: 500px;
+
+  margin: 28px 0 32px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ROUNDED BUTTON
+========================================================= */
+
+.lonvera-rounded-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+
+  width: fit-content;
+
+  min-width: 230px;
+
+  padding: 7px 7px 7px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+
+  background: transparent;
+
+  color: var(--white);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-rounded-btn i {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--copper);
+  color: var(--white);
+
+  font-size: 12px;
+
+  transition: transform var(--transition);
+}
+
+.lonvera-rounded-btn:hover {
+  color: var(--white);
+
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--copper);
+
+  transform: translateY(-3px);
+}
+
+.lonvera-rounded-btn:hover i {
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .lonvera-destination-grid {
+    gap: 30px;
+  }
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    height: 570px;
+    min-height: 570px;
+    max-height: 570px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 510px;
+    min-height: 510px;
+    max-height: 510px;
+
+    flex-basis: 510px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-destinations-hero {
+    min-height: 650px;
+  }
+
+  .lonvera-destinations-hero-content {
+    min-height: 650px;
+  }
+
+  .lonvera-destinations-intro-grid {
+    gap: 60px;
+  }
+
+  .lonvera-destination-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    height: 520px;
+    min-height: 520px;
+    max-height: 520px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 460px;
+    min-height: 460px;
+    max-height: 460px;
+
+    flex-basis: 460px;
+  }
+
+  .lonvera-editorial-content {
+    padding: 50px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-destinations-hero {
+    min-height: 620px;
+    height: 760px;
+  }
+
+  .lonvera-destinations-hero-content {
+    min-height: 620px;
+
+    padding: 100px 0 60px;
+  }
+
+  .lonvera-destinations-hero h1 {
+    font-size: clamp(70px, 12vw, 110px);
+  }
+
+  .lonvera-destinations-intro {
+    padding: 85px 0;
+  }
+
+  .lonvera-destinations-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .lonvera-destinations-intro-copy {
+    max-width: 680px;
+  }
+
+  .lonvera-destination-list {
+    padding: 85px 0;
+  }
+
+  .lonvera-destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+
+    border-radius: 24px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 440px;
+    min-height: 440px;
+    max-height: 440px;
+
+    flex-basis: 440px;
+  }
+
+  .lonvera-card-image-content {
+    padding: 25px 19px 22px;
+  }
+
+  .lonvera-card-image-content h3 {
+    font-size: 34px;
+  }
+
+  .lonvera-editorial-card {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    border-radius: 26px;
+  }
+
+  .lonvera-editorial-image {
+    height: 390px;
+  }
+
+  .lonvera-editorial-content {
+    padding: 55px 45px;
+  }
+
+  .lonvera-destinations-editorial {
+    padding-bottom: 85px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-destinations-hero {
+    height: 680px;
+    min-height: 680px;
+  }
+
+  .lonvera-destinations-hero-content {
+    min-height: 680px;
+
+    padding: 100px 0 55px;
+  }
+
+  .lonvera-destinations-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  .lonvera-destinations-eyebrow i {
+    width: 24px;
+  }
+
+  .lonvera-destinations-hero h1 {
+    font-size: clamp(64px, 19vw, 94px);
+    line-height: 0.82;
+  }
+
+  .lonvera-destinations-hero p {
+    margin-top: 27px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .lonvera-destination-scroll {
+    margin-top: 30px;
+
+    padding-left: 16px;
+
+    font-size: 9px;
+  }
+
+  .lonvera-destination-scroll span {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  /* INTRO */
+
+  .lonvera-destinations-intro {
+    padding: 70px 0;
+  }
+
+  .lonvera-destinations-intro-grid {
+    gap: 32px;
+  }
+
+  .lonvera-destinations-label {
+    font-size: 9px;
+  }
+
+  .lonvera-destinations-intro h2 {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+
+  .lonvera-destinations-intro-copy p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+
+  /* LIST */
+
+  .lonvera-destination-list {
+    padding: 70px 0;
+  }
+
+  .lonvera-destination-list
+  .lonvera-section-title {
+    margin-bottom: 35px;
+  }
+
+
+  /* TABS */
+
+  .lonvera-destination-tabs {
+    gap: 7px;
+
+    margin-bottom: 28px;
+
+    padding: 6px;
+
+    border-radius: 18px;
+  }
+
+  .lonvera-destination-tab {
+    min-height: 43px;
+
+    padding: 0 13px;
+
+    font-size: 8px;
+  }
+
+  .lonvera-destination-tab > i {
+    font-size: 11px;
+  }
+
+  .lonvera-destination-tab b {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  /* RESULT */
+
+  .lonvera-destination-results {
+    gap: 12px;
+
+    margin-bottom: 22px;
+  }
+
+  .lonvera-result-count strong {
+    font-size: 26px;
+  }
+
+  .lonvera-result-count span,
+  .lonvera-result-area {
+    font-size: 7px;
+  }
+
+
+  /* ONE COLUMN */
+
+  .lonvera-destination-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    width: 100%;
+  }
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    width: 100%;
+
+    height: 480px;
+    min-height: 480px;
+    max-height: 480px;
+
+    border-radius: 22px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+
+    flex-basis: 420px;
+  }
+
+  .lonvera-card-number {
+    top: 15px;
+    left: 15px;
+
+    width: 46px;
+    height: 46px;
+
+    font-size: 18px;
+  }
+
+  .lonvera-card-category {
+    top: 18px;
+    right: 15px;
+
+    padding: 8px 11px;
+
+    font-size: 7px;
+  }
+
+  .lonvera-card-arrow {
+    top: 70px;
+    right: 15px;
+
+    width: 44px;
+    height: 44px;
+  }
+
+  .lonvera-card-image-content {
+    padding: 24px 18px 21px;
+  }
+
+  .lonvera-card-image-content h3 {
+    margin-bottom: 8px;
+
+    font-size: clamp(31px, 9vw, 42px);
+  }
+
+  .lonvera-card-image-content p {
+    font-size: 10px;
+  }
+
+  .lonvera-card-bottom {
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+
+    flex-basis: 60px;
+
+    padding: 0 18px;
+  }
+
+
+  /* EDITORIAL */
+
+  .lonvera-destinations-editorial {
+    margin: 0;
+
+    padding: 0 0 70px;
+  }
+
+  .lonvera-editorial-card {
+    grid-template-columns: 1fr;
+
+    border-radius: 22px;
+  }
+
+  .lonvera-editorial-image {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .lonvera-editorial-content {
+    padding: 42px 24px 45px;
+  }
+
+  .lonvera-editorial-content h2 {
+    font-size: clamp(48px, 13vw, 65px);
+  }
+
+  .lonvera-editorial-content p {
+    margin: 22px 0 28px;
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .lonvera-rounded-btn {
+    min-width: 210px;
+
+    padding-left: 18px;
+
+    font-size: 8px;
+  }
+
+  .lonvera-rounded-btn i {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lonvera-destinations-hero {
+    height: 620px;
+    min-height: 620px;
+  }
+
+  .lonvera-destinations-hero-content {
+    min-height: 620px;
+
+    padding-top: 95px;
+  }
+
+  .lonvera-destinations-hero h1 {
+    font-size: 68px;
+  }
+
+  .lonvera-destinations-hero p {
+    font-size: 13px;
+  }
+
+
+  .lonvera-destinations-intro {
+    padding: 60px 0;
+  }
+
+  .lonvera-destinations-intro h2 {
+    font-size: 46px;
+  }
+
+
+  .lonvera-destination-list {
+    padding: 60px 0;
+  }
+
+
+  .lonvera-destination-grid {
+    gap: 16px;
+  }
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    height: 445px;
+    min-height: 445px;
+    max-height: 445px;
+
+    border-radius: 20px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 385px;
+    min-height: 385px;
+    max-height: 385px;
+
+    flex-basis: 385px;
+  }
+
+  .lonvera-card-image-content {
+    padding: 20px 16px 18px;
+  }
+
+  .lonvera-card-image-content h3 {
+    font-size: 31px;
+  }
+
+  .lonvera-card-image-content p {
+    font-size: 9px;
+
+    -webkit-line-clamp: 2;
+  }
+
+  .lonvera-card-bottom {
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+
+    flex-basis: 60px;
+
+    padding: 0 16px;
+  }
+
+  .lonvera-card-bottom > span {
+    font-size: 8px;
+  }
+
+  .lonvera-card-bottom small {
+    font-size: 6px;
+  }
+
+
+  .lonvera-editorial-image {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  .lonvera-editorial-content {
+    padding: 38px 20px 40px;
+  }
+
+  .lonvera-editorial-content h2 {
+    font-size: 48px;
+  }
+
+  .lonvera-editorial-content p {
+    font-size: 12px;
+  }
+
+  .lonvera-rounded-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .lonvera-destinations-hero {
+    height: 590px;
+    min-height: 590px;
+  }
+
+  .lonvera-destinations-hero-content {
+    min-height: 590px;
+  }
+
+  .lonvera-destinations-hero h1 {
+    font-size: 61px;
+  }
+
+  .lonvera-destinations-hero p {
+    font-size: 12px;
+  }
+
+
+  .lonvera-destination-grid
+  .lonvera-destination-card {
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+  }
+
+  .lonvera-destination-card-image {
+    height: 360px;
+    min-height: 360px;
+    max-height: 360px;
+
+    flex-basis: 360px;
+  }
+
+  .lonvera-card-number {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+  .lonvera-card-category {
+    font-size: 6px;
+  }
+
+  .lonvera-card-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lonvera-card-image-content h3 {
+    font-size: 28px;
+  }
+
+  .lonvera-editorial-image {
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+  }
+
+  .lonvera-editorial-content h2 {
+    font-size: 43px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.lonvera-destination-tab:focus-visible,
+.lonvera-destination-card:focus-visible,
+.lonvera-destination-scroll:focus-visible,
+.lonvera-rounded-btn:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lonvera-destination-card,
+  .lonvera-destination-card img,
+  .lonvera-card-arrow,
+  .lonvera-card-number,
+  .lonvera-rounded-btn,
+  .lonvera-rounded-btn i,
+  .lonvera-destination-scroll,
+  .lonvera-destination-scroll span,
+  .lonvera-editorial-image img {
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,117 @@
+/* =========================================================
+   LONVÉRA — SECTION TITLE
+========================================================= */
+
+.lonvera-section-title {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.lonvera-section-title.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.lonvera-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 17px;
+
+  color: var(--copper);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.lonvera-section-eyebrow i {
+  display: block;
+
+  width: 32px;
+  height: 1px;
+
+  background: var(--copper);
+}
+
+.lonvera-section-title.center
+.lonvera-section-eyebrow {
+  justify-content: center;
+}
+
+.lonvera-section-title h2 {
+  margin: 0;
+
+  color: var(--aubergine);
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(45px, 5vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.lonvera-section-title h2 em {
+  color: var(--copper);
+
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lonvera-section-title p {
+  max-width: 540px;
+  margin: 22px 0 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.lonvera-section-title.center p {
+  margin-inline: auto;
+}
+
+/* =========================================================
+   DARK SECTION
+========================================================= */
+
+.section-dark .lonvera-section-title h2 {
+  color: var(--white);
+}
+
+.section-dark .lonvera-section-title p {
+  color: var(--sage-light);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-section-title {
+    margin-bottom: 38px;
+  }
+
+  .lonvera-section-title h2 {
+    font-size: 46px;
+  }
+
+  .lonvera-section-title p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .lonvera-section-title h2 {
+    font-size: 40px;
+  }
+
+  .lonvera-section-eyebrow {
+    font-size: 8px;
+  }
+}

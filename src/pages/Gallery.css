@@ -1,0 +1,1698 @@
+/* =========================================================
+   LONVÉRA GALLERY
+   Luxury British Editorial Travel
+========================================================= */
+
+.lonvera-gallery {
+  --gallery-radius: 30px;
+  --gallery-radius-sm: 22px;
+
+  background: var(--porcelain);
+  color: var(--text);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.lonvera-gallery *,
+.lonvera-gallery *::before,
+.lonvera-gallery *::after {
+  box-sizing: border-box;
+}
+
+.lonvera-gallery img {
+  display: block;
+  max-width: 100%;
+}
+
+.lonvera-gallery button,
+.lonvera-gallery a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lonvera-gallery-collection {
+  scroll-margin-top: 80px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-gallery-hero {
+  position: relative;
+  min-height: 760px;
+  background: var(--aubergine);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.lonvera-gallery-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+}
+
+.lonvera-gallery-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: lonveraGalleryHeroZoom 14s ease-in-out infinite alternate;
+}
+
+.lonvera-gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(30, 17, 27, 0.88) 0%,
+      rgba(30, 17, 27, 0.56) 42%,
+      rgba(30, 17, 27, 0.20) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(30, 17, 27, 0.82) 0%,
+      transparent 58%
+    );
+}
+
+.lonvera-gallery-hero-content {
+  min-height: 760px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 0 0 92px;
+  max-width: 900px;
+}
+
+.lonvera-gallery-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 26px;
+
+  color: var(--copper-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.lonvera-gallery-eyebrow i {
+  width: 34px;
+  height: 1px;
+  display: inline-block;
+  background: var(--copper);
+}
+
+.lonvera-gallery-hero h1 {
+  margin: 0;
+
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(78px, 10vw, 150px);
+  font-weight: 500;
+  line-height: 0.78;
+  letter-spacing: -0.055em;
+}
+
+.lonvera-gallery-hero h1 em {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+.lonvera-gallery-hero-content > p {
+  margin: 36px 0 30px;
+
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.lonvera-gallery-scroll {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 12px 17px 12px 21px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.lonvera-gallery-scroll i {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--copper);
+  color: var(--white);
+
+  font-size: 14px;
+}
+
+.lonvera-gallery-scroll:hover {
+  color: var(--white);
+  border-color: var(--copper);
+  background: rgba(182, 106, 69, 0.18);
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-gallery-intro {
+  padding: 125px 0;
+  background: var(--porcelain);
+}
+
+.lonvera-gallery-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.lonvera-gallery-label {
+  display: block;
+  margin-bottom: 25px;
+
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.lonvera-gallery-intro h2 {
+  margin: 0;
+
+  color: var(--aubergine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.91;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-gallery-intro h2 em {
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.lonvera-gallery-intro-copy {
+  padding-top: 20px;
+}
+
+.lonvera-gallery-intro-copy .lead {
+  margin: 0 0 25px;
+
+  color: var(--aubergine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lonvera-gallery-intro-copy > p:not(.lead) {
+  max-width: 560px;
+  margin: 0;
+
+  color: var(--sage-grey);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.lonvera-gallery-collection {
+  position: relative;
+  padding: 125px 0 135px;
+  background: var(--porcelain-light);
+}
+
+.lonvera-gallery-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  gap: 80px;
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.lonvera-gallery-heading > div > span,
+.lonvera-gallery-styles-heading > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.lonvera-gallery-heading h2 {
+  margin: 0;
+
+  color: var(--aubergine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 84px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-gallery-heading h2 em {
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.lonvera-gallery-heading > p {
+  max-width: 490px;
+  margin: 0 0 8px;
+
+  color: var(--sage-grey);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   FILTER WRAPPER
+========================================================= */
+
+.lonvera-gallery-filter-wrap {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  overflow: hidden;
+}
+
+.lonvera-gallery-filters {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  width: 100%;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lonvera-gallery-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.lonvera-gallery-filters button {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 68px;
+  padding: 0 22px;
+
+  border: 0;
+  border-right: 1px solid var(--border);
+
+  color: var(--sage-grey);
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+
+.lonvera-gallery-filters button:first-child {
+  border-left: 1px solid var(--border);
+}
+
+.lonvera-gallery-filters button::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: var(--copper);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform var(--transition);
+}
+
+.lonvera-gallery-filters button:hover {
+  color: var(--aubergine);
+  background: rgba(182, 106, 69, 0.05);
+}
+
+.lonvera-gallery-filters button.active {
+  color: var(--white);
+  background: var(--aubergine);
+}
+
+.lonvera-gallery-filters button.active::before {
+  transform: scaleX(1);
+}
+
+.lonvera-gallery-filters button i {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--white);
+  background: var(--copper);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESULTS BAR
+========================================================= */
+
+.lonvera-gallery-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 28px;
+  padding: 3px 2px;
+
+  color: var(--sage-grey);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.lonvera-gallery-results span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lonvera-gallery-results strong {
+  color: var(--copper);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+   ALL CARDS SAME WIDTH / HEIGHT
+========================================================= */
+
+.lonvera-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.lonvera-gallery-item {
+  position: relative;
+
+  min-width: 0;
+
+  aspect-ratio: 1 / 1.16;
+
+  border: 1px solid rgba(47, 33, 43, 0.08);
+  border-radius: var(--gallery-radius);
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+
+  cursor: pointer;
+
+  isolation: isolate;
+
+  box-shadow: var(--shadow-soft);
+
+  animation: lonveraGalleryCardIn 0.55s ease both;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+
+/* Remove masonry differences */
+.lonvera-gallery-item.large,
+.lonvera-gallery-item.normal,
+.lonvera-gallery-item.tall,
+.lonvera-gallery-item.wide {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.lonvera-gallery-image-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.lonvera-gallery-image-wrap img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter var(--transition);
+}
+
+.lonvera-gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 16, 25, 0.2) 0%,
+      transparent 35%,
+      rgba(28, 16, 25, 0.12) 45%,
+      rgba(28, 16, 25, 0.92) 100%
+    );
+
+  transition: opacity var(--transition);
+}
+
+.lonvera-gallery-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(182, 106, 69, 0.55);
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-gallery-item:hover .lonvera-gallery-image-wrap img {
+  transform: scale(1.08);
+  filter: saturate(1.06);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.lonvera-gallery-item-top {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lonvera-gallery-item-top > span {
+  min-width: 42px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+
+  color: var(--white);
+
+  background: rgba(30, 17, 27, 0.38);
+  backdrop-filter: blur(12px);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.lonvera-gallery-plus {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+
+  color: var(--white);
+  background: rgba(30, 17, 27, 0.28);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.lonvera-gallery-item:hover .lonvera-gallery-plus {
+  background: var(--copper);
+  border-color: var(--copper);
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.lonvera-gallery-item-content {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 3;
+}
+
+.lonvera-gallery-item-content > span {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-gallery-item-content h3 {
+  margin: 0 0 8px;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.lonvera-gallery-item-content p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.lonvera-gallery-item-content p i {
+  color: var(--copper-light);
+}
+
+
+/* =========================================================
+   CARD CORNER ARROW
+========================================================= */
+
+.lonvera-gallery-item-corner {
+  position: absolute;
+  right: 24px;
+  bottom: 25px;
+
+  z-index: 4;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  color: var(--white);
+  background: rgba(30, 17, 27, 0.25);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translate(8px, 8px);
+
+  transition:
+    opacity var(--transition),
+    transform var(--transition),
+    background var(--transition);
+}
+
+.lonvera-gallery-item:hover .lonvera-gallery-item-corner {
+  opacity: 1;
+  transform: translate(0, 0);
+  background: var(--copper);
+  border-color: var(--copper);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lonvera-gallery-empty {
+  padding: 90px 30px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--gallery-radius);
+
+  text-align: center;
+
+  background: var(--porcelain);
+}
+
+.lonvera-gallery-empty > i {
+  color: var(--copper);
+  font-size: 42px;
+}
+
+.lonvera-gallery-empty h3 {
+  margin: 20px 0 10px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.lonvera-gallery-empty p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+
+  color: var(--sage-grey);
+  line-height: 1.7;
+}
+
+.lonvera-gallery-empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 20px;
+
+  border-radius: 100px;
+
+  color: var(--white);
+  background: var(--aubergine);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.lonvera-gallery-empty a i {
+  color: var(--copper-light);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.lonvera-gallery-quote {
+  position: relative;
+
+  padding: 145px 0;
+
+  background: var(--aubergine);
+
+  overflow: hidden;
+}
+
+.lonvera-gallery-quote::before {
+  content: "L";
+
+  position: absolute;
+  top: -90px;
+  right: 3%;
+
+  color: rgba(255, 255, 255, 0.025);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 500px;
+  line-height: 1;
+}
+
+.lonvera-gallery-quote-inner {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+.lonvera-gallery-quote-inner > span {
+  display: block;
+  margin-bottom: 35px;
+
+  color: var(--copper-light);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+}
+
+.lonvera-gallery-quote blockquote {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 6vw, 86px);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-gallery-quote blockquote em {
+  color: var(--copper-light);
+  font-weight: 400;
+}
+
+.lonvera-gallery-quote-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 38px auto 24px;
+
+  background: var(--copper);
+}
+
+.lonvera-gallery-quote-inner > p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lonvera-gallery-cta {
+  padding: 120px 0;
+  background: var(--porcelain);
+}
+
+.lonvera-gallery-cta-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 600px;
+
+  border-radius: 34px;
+  overflow: hidden;
+
+  background: var(--aubergine);
+
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-gallery-cta-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.lonvera-gallery-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 1.2s ease;
+}
+
+.lonvera-gallery-cta-card:hover .lonvera-gallery-cta-image img {
+  transform: scale(1.05);
+}
+
+.lonvera-gallery-cta-image > div {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 55%,
+      rgba(31, 17, 27, 0.35)
+    );
+}
+
+.lonvera-gallery-cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 75px;
+}
+
+.lonvera-gallery-cta-content > span {
+  margin-bottom: 25px;
+
+  color: var(--copper-light);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-gallery-cta-content h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(56px, 5vw, 78px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-gallery-cta-content h2 em {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+.lonvera-gallery-cta-content p {
+  max-width: 450px;
+  margin: 30px 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   ROUNDED BUTTON
+========================================================= */
+
+.lonvera-gallery .lonvera-rounded-btn {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 14px 20px 14px 23px;
+
+  border: 1px solid var(--copper);
+  border-radius: 100px;
+
+  color: var(--white);
+  background: var(--copper);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.lonvera-gallery .lonvera-rounded-btn i {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--aubergine);
+  background: var(--copper-light);
+
+  transition: transform var(--transition);
+}
+
+.lonvera-gallery .lonvera-rounded-btn:hover {
+  color: var(--white);
+  background: var(--copper);
+  transform: translateY(-3px);
+}
+
+.lonvera-gallery .lonvera-rounded-btn:hover i {
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lonvera-gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: grid;
+  place-items: center;
+
+  padding: 30px;
+
+  background: rgba(19, 12, 17, 0.94);
+
+  backdrop-filter: blur(18px);
+
+  animation: lonveraLightboxIn 0.3s ease;
+}
+
+.lonvera-gallery-lightbox-close {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.lonvera-gallery-lightbox-close:hover {
+  background: var(--copper);
+  border-color: var(--copper);
+  transform: rotate(90deg);
+}
+
+.lonvera-gallery-lightbox-inner {
+  width: min(100%, 1100px);
+  max-height: calc(100vh - 60px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+
+  animation: lonveraLightboxImageIn 0.4s ease;
+}
+
+.lonvera-gallery-lightbox-image {
+  min-height: 600px;
+  background: #111;
+}
+
+.lonvera-gallery-lightbox-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.lonvera-gallery-lightbox-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 38px;
+}
+
+.lonvera-gallery-lightbox-caption > span {
+  margin-bottom: 15px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-gallery-lightbox-caption h3 {
+  margin: 0 0 15px;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.lonvera-gallery-lightbox-caption p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 11px;
+}
+
+.lonvera-gallery-lightbox-caption p i {
+  color: var(--copper-light);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes lonveraGalleryHeroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes lonveraGalleryCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lonveraLightboxIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lonveraLightboxImageIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1399px) {
+
+  .lonvera-gallery-hero,
+  .lonvera-gallery-hero-content {
+    min-height: 720px;
+  }
+
+  .lonvera-gallery-intro {
+    padding: 110px 0;
+  }
+
+  .lonvera-gallery-collection {
+    padding: 110px 0 120px;
+  }
+
+  .lonvera-gallery-item {
+    aspect-ratio: 1 / 1.12;
+  }
+
+  .lonvera-gallery-cta-card,
+  .lonvera-gallery-cta-image {
+    min-height: 560px;
+  }
+
+  .lonvera-gallery-cta-content {
+    padding: 60px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / LAPTOP
+   2 CARDS
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-gallery-hero,
+  .lonvera-gallery-hero-content {
+    min-height: 680px;
+  }
+
+  .lonvera-gallery-hero-content {
+    padding-bottom: 75px;
+  }
+
+  .lonvera-gallery-intro-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+  }
+
+  .lonvera-gallery-heading {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 45px;
+  }
+
+  .lonvera-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .lonvera-gallery-item {
+    aspect-ratio: 1 / 1.08;
+  }
+
+  .lonvera-gallery-item-content h3 {
+    font-size: 38px;
+  }
+
+  .lonvera-gallery-cta-content {
+    padding: 50px;
+  }
+
+  .lonvera-gallery-lightbox-inner {
+    grid-template-columns: minmax(0, 1fr) 250px;
+  }
+
+  .lonvera-gallery-lightbox-image {
+    min-height: 540px;
+  }
+}
+
+
+/* =========================================================
+   991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-gallery-hero,
+  .lonvera-gallery-hero-content {
+    min-height: 650px;
+  }
+
+  .lonvera-gallery-intro {
+    padding: 90px 0;
+  }
+
+  .lonvera-gallery-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .lonvera-gallery-intro-copy {
+    padding-top: 0;
+    max-width: 680px;
+  }
+
+  .lonvera-gallery-collection {
+    padding: 90px 0 100px;
+  }
+
+  .lonvera-gallery-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .lonvera-gallery-heading > p {
+    max-width: 650px;
+  }
+
+  .lonvera-gallery-quote {
+    padding: 110px 0;
+  }
+
+  .lonvera-gallery-cta {
+    padding: 90px 0;
+  }
+
+  .lonvera-gallery-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-gallery-cta-image {
+    min-height: 450px;
+    order: 1;
+  }
+
+  .lonvera-gallery-cta-content {
+    min-height: 500px;
+    padding: 60px;
+    order: 2;
+  }
+
+  .lonvera-gallery-lightbox-inner {
+    grid-template-columns: 1fr;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+
+  .lonvera-gallery-lightbox-image {
+    min-height: 480px;
+    height: 55vh;
+  }
+
+  .lonvera-gallery-lightbox-caption {
+    padding: 28px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   1 CARD
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-gallery-hero,
+  .lonvera-gallery-hero-content {
+    min-height: 570px;
+  }
+
+  .lonvera-gallery-hero-content {
+    padding-bottom: 60px;
+  }
+
+  .lonvera-gallery-hero h1 {
+    font-size: 76px;
+  }
+
+  .lonvera-gallery-hero-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .lonvera-gallery-hero-content > p br {
+    display: none;
+  }
+
+  .lonvera-gallery-intro {
+    padding: 75px 0;
+  }
+
+  .lonvera-gallery-intro h2 {
+    font-size: 56px;
+  }
+
+  .lonvera-gallery-intro-copy .lead {
+    font-size: 27px;
+  }
+
+  .lonvera-gallery-collection {
+    padding: 75px 0 80px;
+  }
+
+  .lonvera-gallery-heading h2 {
+    font-size: 57px;
+  }
+
+  .lonvera-gallery-filters {
+    margin: 0 -1px;
+  }
+
+  .lonvera-gallery-filters button {
+    min-height: 62px;
+    padding: 0 17px;
+    font-size: 9px;
+  }
+
+  .lonvera-gallery-results {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  .lonvera-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lonvera-gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+    border-radius: 25px;
+  }
+
+  .lonvera-gallery-item-content {
+    left: 23px;
+    right: 23px;
+    bottom: 23px;
+  }
+
+  .lonvera-gallery-item-content h3 {
+    font-size: 39px;
+  }
+
+  .lonvera-gallery-item-corner {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .lonvera-gallery-quote {
+    padding: 90px 0;
+  }
+
+  .lonvera-gallery-quote blockquote {
+    font-size: 50px;
+  }
+
+  .lonvera-gallery-cta {
+    padding: 75px 0;
+  }
+
+  .lonvera-gallery-cta-image {
+    min-height: 360px;
+  }
+
+  .lonvera-gallery-cta-content {
+    min-height: auto;
+    padding: 45px 30px;
+  }
+
+  .lonvera-gallery-cta-content h2 {
+    font-size: 53px;
+  }
+
+  .lonvera-gallery-cta-content p {
+    font-size: 14px;
+  }
+
+  .lonvera-gallery-cta-content .lonvera-rounded-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lonvera-gallery-lightbox {
+    padding: 15px;
+  }
+
+  .lonvera-gallery-lightbox-close {
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    z-index: 5;
+  }
+
+  .lonvera-gallery-lightbox-inner {
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .lonvera-gallery-lightbox-image {
+    min-height: 0;
+    height: 48vh;
+  }
+
+  .lonvera-gallery-lightbox-caption h3 {
+    font-size: 39px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .lonvera-gallery-hero,
+  .lonvera-gallery-hero-content {
+    min-height: 520px;
+  }
+
+  .lonvera-gallery-hero h1 {
+    font-size: 63px;
+  }
+
+  .lonvera-gallery-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+  }
+
+  .lonvera-gallery-eyebrow i {
+    width: 25px;
+  }
+
+  .lonvera-gallery-scroll {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lonvera-gallery-intro h2 {
+    font-size: 49px;
+  }
+
+  .lonvera-gallery-heading h2 {
+    font-size: 49px;
+  }
+
+  .lonvera-gallery-heading > p {
+    font-size: 14px;
+  }
+
+  .lonvera-gallery-filter-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .lonvera-gallery-filters button {
+    min-height: 58px;
+    padding: 0 15px;
+  }
+
+  .lonvera-gallery-item {
+    aspect-ratio: 1 / 1.08;
+    border-radius: 22px;
+  }
+
+  .lonvera-gallery-item-top {
+    top: 17px;
+    left: 17px;
+    right: 17px;
+  }
+
+  .lonvera-gallery-item-content {
+    left: 19px;
+    right: 19px;
+    bottom: 19px;
+  }
+
+  .lonvera-gallery-item-content h3 {
+    font-size: 36px;
+  }
+
+  .lonvera-gallery-item-corner {
+    display: none;
+  }
+
+  .lonvera-gallery-plus {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lonvera-gallery-quote blockquote {
+    font-size: 44px;
+  }
+
+  .lonvera-gallery-cta-card {
+    border-radius: 25px;
+  }
+
+  .lonvera-gallery-cta-image {
+    min-height: 300px;
+  }
+
+  .lonvera-gallery-cta-content {
+    padding: 38px 24px;
+  }
+
+  .lonvera-gallery-cta-content h2 {
+    font-size: 47px;
+  }
+
+  .lonvera-gallery-lightbox-image {
+    height: 40vh;
+  }
+
+  .lonvera-gallery-lightbox-caption {
+    padding: 23px;
+  }
+
+  .lonvera-gallery-lightbox-caption h3 {
+    font-size: 35px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .lonvera-gallery-hero h1 {
+    font-size: 57px;
+  }
+
+  .lonvera-gallery-intro h2,
+  .lonvera-gallery-heading h2 {
+    font-size: 45px;
+  }
+
+  .lonvera-gallery-item {
+    aspect-ratio: 1 / 1.02;
+  }
+
+  .lonvera-gallery-item-content h3 {
+    font-size: 33px;
+  }
+
+  .lonvera-gallery-quote blockquote {
+    font-size: 39px;
+  }
+
+  .lonvera-gallery-cta-content h2 {
+    font-size: 43px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .lonvera-gallery-hero-image img,
+  .lonvera-gallery-item,
+  .lonvera-gallery-image-wrap img,
+  .lonvera-gallery-cta-image img {
+    animation: none;
+    transition: none;
+  }
+}
+.lonvera-gallery-item {
+  border: none !important;
+  box-shadow: 0 18px 50px rgba(23, 39, 70, 0.10);
+  overflow: hidden;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.lonvera-gallery-item:hover {
+  border: none !important;
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px rgba(23, 39, 70, 0.16);
+}

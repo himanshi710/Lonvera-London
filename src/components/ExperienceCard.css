@@ -1,0 +1,780 @@
+/* =========================================================
+   LONVÉRA
+   EXPERIENCE / PACKAGE CARD
+   REFERENCE STYLE
+========================================================= */
+
+.lonvera-package-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: var(--porcelain-light);
+
+  border: 1px solid rgba(36, 24, 47, 0.1);
+  border-radius: 27px;
+
+  color: var(--text);
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 28px rgba(36, 24, 47, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
+}
+
+.lonvera-package-card:hover {
+  color: var(--text);
+
+  transform: translateY(-6px);
+
+  border-color: rgba(182, 106, 69, 0.3);
+
+  box-shadow:
+    0 20px 45px rgba(36, 24, 47, 0.14);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.lonvera-package-image {
+  position: relative;
+
+  width: 100%;
+  height: 270px;
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+
+  /*
+    Screenshot style:
+    large curved bottom-right
+  */
+  border-radius: 0 0 75px 0;
+}
+
+.lonvera-package-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lonvera-package-card:hover
+.lonvera-package-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.lonvera-package-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(36, 24, 47, 0.04) 0%,
+      rgba(36, 24, 47, 0.05) 45%,
+      rgba(36, 24, 47, 0.7) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DURATION BADGE
+========================================================= */
+
+.lonvera-package-duration {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(36, 24, 47, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: var(--white);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1;
+  letter-spacing: 0.06em;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  z-index: 3;
+}
+
+.lonvera-package-duration i {
+  color: var(--copper-light);
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   ROUND ARROW
+========================================================= */
+
+.lonvera-package-arrow {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--copper);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  color: var(--white);
+
+  font-size: 12px;
+
+  z-index: 3;
+
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease;
+}
+
+.lonvera-package-card:hover
+.lonvera-package-arrow {
+  background: var(--aubergine);
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LOCATION ON IMAGE
+========================================================= */
+
+.lonvera-package-image-location {
+  position: absolute;
+
+  left: 18px;
+  bottom: 19px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--white);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  z-index: 3;
+}
+
+.lonvera-package-image-location i {
+  color: var(--copper-light);
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.lonvera-package-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px 18px 17px;
+
+  background: var(--porcelain-light);
+
+  /*
+    IMPORTANT:
+    No purple / copper background here.
+  */
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.lonvera-package-content h3 {
+  margin: 0 0 7px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.025em;
+
+  transition: color 0.3s ease;
+}
+
+.lonvera-package-card:hover
+.lonvera-package-content h3 {
+  color: var(--copper);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.lonvera-package-description {
+  display: -webkit-box;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  overflow: hidden;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.lonvera-package-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 13px;
+}
+
+.lonvera-package-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 24px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(182, 106, 69, 0.09);
+
+  color: var(--copper);
+
+  border: 1px solid rgba(182, 106, 69, 0.13);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.lonvera-package-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 14px 0 11px;
+
+  background: var(--border);
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.lonvera-package-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.lonvera-package-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  min-width: 0;
+
+  color: var(--text-soft);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.lonvera-package-meta i {
+  flex-shrink: 0;
+
+  color: var(--copper);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.lonvera-package-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 16px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.lonvera-package-price {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.lonvera-package-price small {
+  margin-bottom: 1px;
+
+  color: var(--sage-dark);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.lonvera-package-price strong {
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.lonvera-package-price span {
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   VIEW DETAILS BUTTON
+========================================================= */
+
+.lonvera-package-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 40px;
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  background: var(--aubergine);
+
+  color: var(--white);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    gap 0.3s ease;
+}
+
+.lonvera-package-button i {
+  color: var(--copper-light);
+
+  font-size: 11px;
+
+  transition: transform 0.3s ease;
+}
+
+.lonvera-package-card:hover
+.lonvera-package-button {
+  background: var(--copper);
+
+  gap: 11px;
+}
+
+.lonvera-package-card:hover
+.lonvera-package-button i {
+  color: var(--white);
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .lonvera-package-image {
+    height: 275px;
+  }
+
+  .lonvera-package-content {
+    padding: 19px 19px 18px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .lonvera-package-image {
+    height: 245px;
+
+    border-radius: 0 0 65px 0;
+  }
+
+  .lonvera-package-content {
+    padding: 17px;
+  }
+
+  .lonvera-package-content h3 {
+    font-size: 26px;
+  }
+
+  .lonvera-package-description {
+    font-size: 9px;
+  }
+
+  .lonvera-package-button {
+    padding-inline: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .lonvera-package-card {
+    border-radius: 25px;
+  }
+
+  .lonvera-package-image {
+    height: 250px;
+
+    border-radius: 0 0 65px 0;
+  }
+
+  .lonvera-package-content {
+    padding: 18px;
+  }
+
+  .lonvera-package-content h3 {
+    font-size: 27px;
+  }
+
+  .lonvera-package-description {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-package-card {
+    border-radius: 24px;
+  }
+
+  .lonvera-package-image {
+    height: 275px;
+
+    border-radius: 0 0 70px 0;
+  }
+
+  .lonvera-package-duration {
+    top: 13px;
+    left: 13px;
+
+    padding: 8px 11px;
+
+    font-size: 7px;
+  }
+
+  .lonvera-package-arrow {
+    top: 13px;
+    right: 13px;
+
+    width: 41px;
+    height: 41px;
+  }
+
+  .lonvera-package-image-location {
+    left: 16px;
+    bottom: 18px;
+
+    font-size: 9px;
+  }
+
+  .lonvera-package-content {
+    padding: 19px 17px 17px;
+  }
+
+  .lonvera-package-content h3 {
+    font-size: 29px;
+  }
+
+  .lonvera-package-description {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lonvera-package-card {
+    border-radius: 22px;
+  }
+
+  .lonvera-package-image {
+    height: 235px;
+
+    border-radius: 0 0 58px 0;
+  }
+
+  .lonvera-package-duration {
+    top: 11px;
+    left: 11px;
+
+    padding: 8px 10px;
+
+    font-size: 6.5px;
+  }
+
+  .lonvera-package-arrow {
+    top: 11px;
+    right: 11px;
+
+    width: 39px;
+    height: 39px;
+
+    font-size: 11px;
+  }
+
+  .lonvera-package-image-location {
+    left: 14px;
+    bottom: 15px;
+
+    font-size: 8px;
+  }
+
+  .lonvera-package-content {
+    padding: 17px 15px 16px;
+  }
+
+  .lonvera-package-content h3 {
+    font-size: 27px;
+  }
+
+  .lonvera-package-description {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .lonvera-package-tags {
+    gap: 5px;
+    margin-top: 11px;
+  }
+
+  .lonvera-package-tags span {
+    min-height: 22px;
+    padding: 5px 8px;
+    font-size: 6px;
+  }
+
+  .lonvera-package-divider {
+    margin: 12px 0 10px;
+  }
+
+  .lonvera-package-meta span {
+    font-size: 7px;
+  }
+
+  .lonvera-package-bottom {
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .lonvera-package-price strong {
+    font-size: 23px;
+  }
+
+  .lonvera-package-button {
+    min-height: 37px;
+    padding: 9px 12px;
+
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .lonvera-package-image {
+    height: 215px;
+
+    border-radius: 0 0 52px 0;
+  }
+
+  .lonvera-package-content {
+    padding: 15px 13px;
+  }
+
+  .lonvera-package-content h3 {
+    font-size: 25px;
+  }
+
+  .lonvera-package-description {
+    font-size: 8.5px;
+  }
+
+  .lonvera-package-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lonvera-package-bottom {
+    align-items: center;
+  }
+
+  .lonvera-package-price strong {
+    font-size: 21px;
+  }
+
+  .lonvera-package-button {
+    padding: 8px 10px;
+  }
+
+}
+/* =========================================================
+   VIEW DETAILS — REMOVE HOVER BORDER
+========================================================= */
+
+.lonvera-package-button,
+.lonvera-package-button:hover,
+.lonvera-package-button:focus,
+.lonvera-package-button:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.lonvera-package-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}

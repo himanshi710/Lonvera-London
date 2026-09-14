@@ -1,0 +1,1118 @@
+/* =========================================================
+   LONVÉRA — ABOUT PAGE
+   Modern British Editorial Luxury
+========================================================= */
+
+.lonvera-about {
+  background: var(--porcelain);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.lonvera-about-container {
+  width: min(100% - 60px, 1280px);
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-about-hero {
+  position: relative;
+  min-height: 78vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--aubergine);
+}
+
+.lonvera-about-hero > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  animation: lonveraAboutHeroZoom 12s ease-out both;
+}
+
+.lonvera-about-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23, 16, 31, 0.86),
+      rgba(36, 24, 47, 0.45),
+      rgba(23, 16, 31, 0.28)
+    );
+}
+
+.lonvera-about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 40px, 900px);
+
+  margin: 100px auto 60px;
+
+  text-align: center;
+
+  color: var(--white);
+}
+
+.lonvera-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  color: var(--copper-light);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.lonvera-about-eyebrow i {
+  width: 35px;
+  height: 1px;
+  background: var(--copper);
+}
+
+.lonvera-about-hero h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(60px, 8vw, 105px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.055em;
+
+  line-height: 0.88;
+}
+
+.lonvera-about-hero h1 em {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+.lonvera-about-hero-content p {
+  max-width: 470px;
+
+  margin: 28px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.lonvera-about-hero-bottom {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 0;
+  bottom: 28px;
+
+  width: 100%;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-about-hero-bottom div {
+  width: 70px;
+  height: 1px;
+  background: var(--copper);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-about-intro {
+  padding: 125px 0;
+  background: var(--porcelain-light);
+}
+
+.lonvera-about-intro-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 60px;
+
+  color: var(--copper);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.lonvera-about-intro-label span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.lonvera-about-intro-label i {
+  width: 40px;
+  height: 1px;
+  background: var(--copper);
+}
+
+.lonvera-about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+}
+
+.lonvera-about-intro-title h2 {
+  margin: 15px 0 0;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(55px, 6vw, 84px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.055em;
+
+  line-height: 0.95;
+}
+
+.lonvera-about-intro-title h2 em {
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.lonvera-about-small-label {
+  color: var(--copper);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+.lonvera-about-intro-copy {
+  padding-top: 48px;
+}
+
+.lonvera-about-intro-copy p {
+  margin-bottom: 20px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+.lonvera-about-intro-copy .lonvera-about-lead {
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 24px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ROUNDED BUTTON
+========================================================= */
+
+.lonvera-rounded-btn {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 15px;
+
+  padding: 5px 7px 5px 22px;
+
+  background: var(--aubergine);
+
+  color: var(--white);
+
+  border-radius: 50px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.lonvera-rounded-btn i {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--copper);
+
+  color: var(--white);
+
+  transition: transform var(--transition-fast);
+}
+
+.lonvera-rounded-btn:hover {
+  color: var(--white);
+
+  background: var(--copper);
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-rounded-btn:hover i {
+  background: var(--aubergine);
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.lonvera-about-story {
+  padding: 110px 0;
+
+  background: var(--aubergine);
+}
+
+.lonvera-about-story-grid {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 25px;
+}
+
+.lonvera-about-story-image {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.lonvera-about-story-image.large {
+  min-height: 680px;
+}
+
+.lonvera-about-story-image.small {
+  height: 300px;
+  border-radius: 24px;
+}
+
+.lonvera-about-story-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.9s ease;
+}
+
+.lonvera-about-story-image:hover img {
+  transform: scale(1.06);
+}
+
+.lonvera-about-image-caption {
+  position: absolute;
+
+  left: 25px;
+  right: 25px;
+  bottom: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--white);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-about-story-side {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.lonvera-about-story-quote {
+  flex: 1;
+
+  padding: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 28px;
+
+  background: var(--porcelain);
+
+  color: var(--aubergine);
+}
+
+.lonvera-about-story-quote > span {
+  color: var(--copper);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 75px;
+
+  line-height: 0.5;
+}
+
+.lonvera-about-story-quote h3 {
+  max-width: 440px;
+
+  margin: 25px 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(35px, 4vw, 53px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1;
+}
+
+.lonvera-about-story-quote h3 em {
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.lonvera-about-story-quote small {
+  color: var(--muted);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.lonvera-about-values {
+  padding: 120px 0;
+
+  background: var(--porcelain);
+}
+
+.lonvera-about-values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.lonvera-about-value-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--border);
+
+  border-radius: 28px;
+
+  background: var(--white);
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.lonvera-about-value-card:hover {
+  transform: translateY(-9px);
+
+  border-color: var(--copper-soft);
+
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-value-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lonvera-value-top span {
+  color: var(--copper);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+}
+
+.lonvera-value-top i {
+  color: var(--sage-grey);
+  font-size: 17px;
+}
+
+.lonvera-value-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 65px 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--porcelain);
+
+  color: var(--copper);
+
+  font-size: 21px;
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lonvera-about-value-card:hover .lonvera-value-icon {
+  background: var(--copper);
+
+  color: var(--white);
+
+  transform: rotate(-8deg);
+}
+
+.lonvera-about-value-card h3 {
+  margin-bottom: 13px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 31px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.03em;
+}
+
+.lonvera-about-value-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.lonvera-value-line {
+  width: 38px;
+  height: 2px;
+
+  margin-top: auto;
+
+  background: var(--copper);
+
+  transition: width var(--transition);
+}
+
+.lonvera-about-value-card:hover .lonvera-value-line {
+  width: 75px;
+}
+
+/* =========================================================
+   MOMENTS
+========================================================= */
+
+.lonvera-about-moments {
+  padding: 120px 0;
+
+  background: var(--porcelain-light);
+}
+
+.lonvera-about-moments-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 55px;
+}
+
+.lonvera-about-moments-heading h2 {
+  margin-top: 14px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(55px, 6vw, 82px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.05em;
+
+  line-height: 0.9;
+}
+
+.lonvera-about-moments-heading h2 em {
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.lonvera-about-moments-heading > p {
+  max-width: 330px;
+
+  margin: 0 0 8px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.lonvera-about-moments-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+}
+
+.lonvera-moment-card {
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.lonvera-moment-card.featured {
+  margin-top: 55px;
+}
+
+.lonvera-moment-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: var(--shadow-medium);
+}
+
+.lonvera-moment-image {
+  position: relative;
+
+  height: 360px;
+
+  overflow: hidden;
+}
+
+.lonvera-moment-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.9s ease;
+}
+
+.lonvera-moment-card:hover .lonvera-moment-image img {
+  transform: scale(1.07);
+}
+
+.lonvera-moment-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(23, 16, 31, 0.55)
+  );
+}
+
+.lonvera-moment-image > span {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+}
+
+.lonvera-moment-content {
+  padding: 24px;
+}
+
+.lonvera-moment-content > span {
+  color: var(--copper);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.lonvera-moment-content h3 {
+  margin: 10px 0 8px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+
+  font-weight: 600;
+}
+
+.lonvera-moment-content p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lonvera-about-cta {
+  padding: 110px 25px;
+
+  background: var(--aubergine);
+}
+
+.lonvera-about-cta-inner {
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 75px 45px;
+
+  border: 1px solid rgba(211, 154, 120, 0.28);
+
+  border-radius: 36px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(182, 106, 69, 0.15),
+      transparent 55%
+    );
+}
+
+.lonvera-about-cta h2 {
+  margin: 16px 0 20px;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(52px, 6vw, 80px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.05em;
+
+  line-height: 0.92;
+}
+
+.lonvera-about-cta h2 em {
+  color: var(--copper-light);
+
+  font-weight: 500;
+}
+
+.lonvera-about-cta p {
+  max-width: 430px;
+
+  margin: auto;
+
+  color: var(--sage-light);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.lonvera-about-cta-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.lonvera-rounded-btn.light {
+  background: var(--copper);
+}
+
+.lonvera-rounded-btn.light:hover {
+  background: var(--copper-light);
+}
+
+.lonvera-rounded-btn.light i {
+  background: var(--aubergine);
+}
+
+.lonvera-about-outline-btn {
+  min-height: 54px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50px;
+
+  color: var(--white);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.lonvera-about-outline-btn i {
+  color: var(--copper-light);
+
+  transition: transform var(--transition-fast);
+}
+
+.lonvera-about-outline-btn:hover {
+  color: var(--aubergine);
+
+  background: var(--white);
+
+  border-color: var(--white);
+
+  transform: translateY(-3px);
+}
+
+.lonvera-about-outline-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes lonveraAboutHeroZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-about-container {
+    width: min(100% - 40px, 1280px);
+  }
+
+  .lonvera-about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .lonvera-about-intro-copy {
+    padding-top: 10px;
+    max-width: 650px;
+  }
+
+  .lonvera-about-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-about-story-image.large {
+    min-height: 550px;
+  }
+
+  .lonvera-about-values-grid,
+  .lonvera-about-moments-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lonvera-about-value-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .lonvera-moment-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-about-container {
+    width: min(100% - 30px, 600px);
+  }
+
+  .lonvera-about-hero {
+    min-height: 680px;
+  }
+
+  .lonvera-about-hero-content {
+    margin-top: 70px;
+  }
+
+  .lonvera-about-hero h1 {
+    font-size: clamp(52px, 15vw, 78px);
+  }
+
+  .lonvera-about-hero-content p {
+    font-size: 11px;
+  }
+
+  .lonvera-about-hero-bottom {
+    padding: 0 20px;
+  }
+
+  .lonvera-about-intro,
+  .lonvera-about-values,
+  .lonvera-about-moments {
+    padding: 80px 0;
+  }
+
+  .lonvera-about-intro-grid {
+    gap: 5px;
+  }
+
+  .lonvera-about-intro-title h2 {
+    font-size: 55px;
+  }
+
+  .lonvera-about-story {
+    padding: 75px 0;
+  }
+
+  .lonvera-about-story-image.large {
+    min-height: 440px;
+  }
+
+  .lonvera-about-story-quote {
+    min-height: 400px;
+    padding: 32px;
+  }
+
+  .lonvera-about-story-quote h3 {
+    font-size: 40px;
+  }
+
+  .lonvera-about-values-grid,
+  .lonvera-about-moments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-about-value-card:last-child,
+  .lonvera-moment-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .lonvera-about-value-card {
+    min-height: 350px;
+  }
+
+  .lonvera-moment-card.featured {
+    margin-top: 0;
+  }
+
+  .lonvera-about-moments-heading {
+    display: block;
+  }
+
+  .lonvera-about-moments-heading > p {
+    margin-top: 25px;
+  }
+
+  .lonvera-moment-image {
+    height: 340px;
+  }
+
+  .lonvera-about-cta {
+    padding: 75px 15px;
+  }
+
+  .lonvera-about-cta-inner {
+    padding: 55px 22px;
+    border-radius: 28px;
+  }
+
+  .lonvera-about-cta h2 {
+    font-size: 52px;
+  }
+
+  .lonvera-about-cta-actions {
+    flex-direction: column;
+  }
+
+  .lonvera-about-cta-actions .lonvera-rounded-btn,
+  .lonvera-about-outline-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .lonvera-about-hero {
+    min-height: 620px;
+  }
+
+  .lonvera-about-eyebrow {
+    font-size: 7px;
+    gap: 8px;
+  }
+
+  .lonvera-about-eyebrow i {
+    width: 22px;
+  }
+
+  .lonvera-about-hero h1 {
+    font-size: 50px;
+  }
+
+  .lonvera-about-intro-title h2 {
+    font-size: 47px;
+  }
+
+  .lonvera-about-story-image.large {
+    min-height: 360px;
+  }
+
+  .lonvera-about-story-quote {
+    min-height: 350px;
+    padding: 25px;
+  }
+
+  .lonvera-about-story-quote h3 {
+    font-size: 35px;
+  }
+
+  .lonvera-value-icon {
+    margin-top: 45px;
+  }
+
+  .lonvera-moment-image {
+    height: 290px;
+  }
+
+  .lonvera-about-cta h2 {
+    font-size: 45px;
+  }
+
+}

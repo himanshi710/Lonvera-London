@@ -1,0 +1,2361 @@
+/* =========================================================
+   LONVÉRA — VEHICLES
+   Luxury British Editorial Travel
+========================================================= */
+
+.lonvera-vehicles {
+  --vehicle-card-radius: 28px;
+  --vehicle-image-height: 300px;
+
+  background: var(--porcelain);
+  color: var(--text);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lonvera-vehicles-hero {
+  position: relative;
+  min-height: 760px;
+  background: var(--aubergine);
+  overflow: hidden;
+}
+
+.lonvera-vehicles-hero-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.lonvera-vehicles-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: lonveraVehicleHeroZoom 12s ease-in-out infinite alternate;
+}
+
+.lonvera-vehicles-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24, 16, 27, 0.88) 0%,
+      rgba(24, 16, 27, 0.62) 42%,
+      rgba(24, 16, 27, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(24, 16, 27, 0.72) 0%,
+      transparent 55%
+    );
+}
+
+.lonvera-vehicles-hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 95px;
+  max-width: 850px;
+}
+
+.lonvera-vehicles-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+
+  color: var(--copper-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-vehicles-eyebrow i {
+  width: 34px;
+  height: 1px;
+  display: block;
+  background: var(--copper-light);
+}
+
+.lonvera-vehicles-hero h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(78px, 9vw, 145px);
+  font-weight: 500;
+  line-height: 0.79;
+  letter-spacing: -0.055em;
+}
+
+.lonvera-vehicles-hero h1 em {
+  color: var(--copper-light);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lonvera-vehicles-hero p {
+  margin: 35px 0 30px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.lonvera-vehicles-scroll {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 13px 18px 13px 22px;
+
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+.lonvera-vehicles-scroll i {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--copper);
+  color: var(--white);
+  border-radius: 50%;
+}
+
+.lonvera-vehicles-scroll:hover {
+  color: var(--white);
+  border-color: var(--copper);
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.lonvera-vehicles-intro {
+  padding: 125px 0;
+}
+
+.lonvera-vehicles-intro-grid {
+  display: grid;
+  grid-template-columns: 0.32fr 1fr;
+  gap: 100px;
+}
+
+.lonvera-vehicles-intro-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.lonvera-vehicles-intro-side span,
+.lonvera-vehicles-label,
+.lonvera-vehicle-heading > div > span,
+.lonvera-services-heading > span {
+  display: block;
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-vehicles-intro-side strong {
+  color: rgba(38, 34, 40, 0.13);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 100px;
+  line-height: 0.8;
+  font-weight: 500;
+}
+
+.lonvera-vehicles-intro-content {
+  max-width: 850px;
+}
+
+.lonvera-vehicles-intro-content h2 {
+  margin: 22px 0 35px;
+  color: var(--aubergine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.lonvera-vehicles-intro-content h2 em {
+  color: var(--copper);
+  font-style: italic;
+}
+
+.lonvera-vehicles-intro-content p {
+  max-width: 680px;
+  margin: 0 0 18px;
+  color: var(--sage-grey);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   VEHICLE COLLECTION
+========================================================= */
+
+.lonvera-vehicle-collection {
+  padding: 115px 0 125px;
+  background: var(--porcelain-light);
+}
+
+.lonvera-vehicle-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  align-items: end;
+  gap: 70px;
+  margin-bottom: 45px;
+}
+
+.lonvera-vehicle-heading h2 {
+  margin: 20px 0 0;
+  color: var(--aubergine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.lonvera-vehicle-heading h2 em {
+  color: var(--copper);
+  font-style: italic;
+}
+
+.lonvera-vehicle-heading > p {
+  margin: 0;
+  color: var(--sage-grey);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FILTER TABS
+========================================================= */
+
+.lonvera-vehicle-tabs {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.lonvera-vehicle-tabs-track {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 60px;
+
+  box-shadow:
+    0 12px 35px rgba(38, 34, 40, 0.06);
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lonvera-vehicle-tabs-track::-webkit-scrollbar {
+  display: none;
+}
+
+.lonvera-vehicle-tab {
+  flex: 0 0 auto;
+
+  min-height: 48px;
+  padding: 0 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 0;
+  border-radius: 50px;
+
+  background: transparent;
+  color: var(--sage-grey);
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lonvera-vehicle-tab:hover {
+  color: var(--aubergine);
+  background: rgba(196, 164, 130, 0.11);
+}
+
+.lonvera-vehicle-tab.active {
+  color: var(--white);
+  background: var(--aubergine);
+  box-shadow: 0 8px 22px rgba(44, 28, 40, 0.18);
+}
+
+.lonvera-vehicle-tab i {
+  width: 27px;
+  height: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--copper);
+  border-radius: 50%;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.lonvera-vehicle-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 3px 24px;
+
+  color: var(--sage-grey);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.lonvera-vehicle-results strong {
+  margin-right: 6px;
+  color: var(--copper);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   VEHICLE GRID
+========================================================= */
+
+.lonvera-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* =========================================================
+   VEHICLE CARD
+========================================================= */
+
+.lonvera-vehicle-card {
+  position: relative;
+
+  min-width: 0;
+  overflow: hidden;
+
+  background: var(--white);
+  border: 0;
+  border-radius: var(--vehicle-card-radius);
+
+  box-shadow:
+    0 12px 30px rgba(38, 34, 40, 0.07);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+
+  animation: lonveraVehicleCardIn 0.55s ease both;
+}
+
+.lonvera-vehicle-card:hover {
+  transform: translateY(-9px);
+  box-shadow:
+    0 25px 55px rgba(38, 34, 40, 0.13);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.lonvera-vehicle-image {
+  position: relative;
+  height: var(--vehicle-image-height);
+  overflow: hidden;
+  background: var(--aubergine);
+}
+
+.lonvera-vehicle-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lonvera-vehicle-card:hover .lonvera-vehicle-image img {
+  transform: scale(1.08);
+}
+
+.lonvera-vehicle-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 22, 29, 0.46) 0%,
+      transparent 45%,
+      rgba(28, 22, 29, 0.68) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.lonvera-vehicle-number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+  background: rgba(31, 25, 31, 0.74);
+
+  border-radius: 50%;
+
+  backdrop-filter: blur(8px);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.lonvera-vehicle-category {
+  position: absolute;
+  top: 18px;
+  left: 68px;
+
+  padding: 10px 14px;
+
+  color: var(--white);
+  background: rgba(31, 25, 31, 0.78);
+
+  border-radius: 50px;
+
+  backdrop-filter: blur(8px);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.lonvera-vehicle-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+  background: var(--copper);
+
+  border-radius: 50%;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  transition: var(--transition);
+}
+
+.lonvera-vehicle-card:hover .lonvera-vehicle-arrow {
+  transform: rotate(45deg);
+  background: var(--aubergine);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.lonvera-vehicle-content {
+  min-height: 365px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 25px 23px;
+}
+
+.lonvera-vehicle-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: var(--copper);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.lonvera-vehicle-location i {
+  font-size: 12px;
+}
+
+.lonvera-vehicle-content h3 {
+  margin: 0;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.lonvera-vehicle-subtitle {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--sage-grey);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   SPECS
+========================================================= */
+
+.lonvera-vehicle-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 20px;
+
+  padding: 14px 0;
+
+  background: var(--porcelain);
+  border-radius: 14px;
+}
+
+.lonvera-vehicle-spec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+  padding: 0 12px;
+}
+
+.lonvera-vehicle-spec + .lonvera-vehicle-spec {
+  border-left: 1px solid rgba(111, 91, 74, 0.16);
+}
+
+.lonvera-vehicle-spec > i {
+  flex: 0 0 auto;
+
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--copper);
+  background: var(--white);
+
+  border-radius: 50%;
+
+  font-size: 12px;
+}
+
+.lonvera-vehicle-spec div {
+  min-width: 0;
+}
+
+.lonvera-vehicle-spec small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: var(--sage-grey);
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.lonvera-vehicle-spec strong {
+  display: block;
+
+  color: var(--text);
+
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   IDEAL
+========================================================= */
+
+.lonvera-vehicle-ideal {
+  margin-top: 17px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(111, 91, 74, 0.13);
+}
+
+.lonvera-vehicle-ideal small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--sage-grey);
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.lonvera-vehicle-ideal strong {
+  display: block;
+
+  color: var(--text);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.lonvera-vehicle-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: auto;
+  padding-top: 17px;
+}
+
+.lonvera-vehicle-price small {
+  display: block;
+
+  margin-bottom: 1px;
+
+  color: var(--sage-grey);
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.lonvera-vehicle-price strong {
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.lonvera-vehicle-enquire {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0 17px;
+
+  color: var(--white);
+  background: var(--aubergine);
+
+  border-radius: 50px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+.lonvera-vehicle-enquire i {
+  width: 25px;
+  height: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--copper);
+  border-radius: 50%;
+
+  font-size: 10px;
+
+  transition: var(--transition);
+}
+
+.lonvera-vehicle-enquire:hover {
+  color: var(--white);
+  background: var(--copper);
+  transform: translateY(-2px);
+}
+
+.lonvera-vehicle-enquire:hover i {
+  background: var(--white);
+  color: var(--aubergine);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lonvera-vehicle-empty {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.lonvera-vehicle-empty > i {
+  width: 70px;
+  height: 70px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--copper);
+  background: var(--white);
+
+  border-radius: 50%;
+
+  font-size: 27px;
+
+  box-shadow: 0 15px 35px rgba(38, 34, 40, 0.08);
+}
+
+.lonvera-vehicle-empty h3 {
+  margin: 22px 0 8px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+}
+
+.lonvera-vehicle-empty p {
+  color: var(--sage-grey);
+}
+
+.lonvera-vehicle-empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 15px;
+
+  padding: 13px 19px;
+
+  color: var(--white);
+  background: var(--aubergine);
+
+  border-radius: 50px;
+
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.lonvera-vehicle-empty a i {
+  color: var(--copper-light);
+}
+
+
+/* =========================================================
+   CHAUFFEUR
+========================================================= */
+
+.lonvera-chauffeur {
+  padding: 120px 0;
+}
+
+.lonvera-chauffeur-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  background: var(--aubergine);
+  border-radius: 34px;
+
+  box-shadow: 0 25px 65px rgba(38, 34, 40, 0.13);
+}
+
+.lonvera-chauffeur-image {
+  position: relative;
+  min-height: 650px;
+}
+
+.lonvera-chauffeur-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lonvera-chauffeur-image > div {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 45%,
+      rgba(39, 27, 37, 0.45)
+    );
+}
+
+.lonvera-chauffeur-content {
+  padding: 75px 65px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lonvera-chauffeur-content > span {
+  color: var(--copper-light);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-chauffeur-content h2 {
+  margin: 25px 0;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 5vw, 78px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.lonvera-chauffeur-content h2 em {
+  color: var(--copper-light);
+  font-style: italic;
+}
+
+.lonvera-chauffeur-content > p {
+  max-width: 550px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.lonvera-chauffeur-features {
+  display: grid;
+  gap: 14px;
+
+  margin: 28px 0;
+}
+
+.lonvera-chauffeur-features > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lonvera-chauffeur-features > div > i {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--copper-light);
+
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.lonvera-chauffeur-features span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lonvera-chauffeur-features strong {
+  color: var(--white);
+  font-size: 12px;
+}
+
+.lonvera-chauffeur-features small {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ROUNDED BUTTON
+========================================================= */
+
+.lonvera-rounded-btn {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 14px 19px;
+
+  color: var(--white);
+  background: var(--copper);
+
+  border-radius: 50px;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+.lonvera-rounded-btn i {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--aubergine);
+  background: var(--white);
+
+  border-radius: 50%;
+}
+
+.lonvera-rounded-btn:hover {
+  color: var(--white);
+  background: var(--copper-light);
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.lonvera-vehicle-services {
+  padding: 115px 0;
+  background: var(--porcelain-light);
+}
+
+.lonvera-services-heading {
+  margin-bottom: 55px;
+}
+
+.lonvera-services-heading h2 {
+  margin: 18px 0 0;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 84px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.lonvera-services-heading h2 em {
+  color: var(--copper);
+  font-style: italic;
+}
+
+.lonvera-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.lonvera-service-card {
+  min-height: 310px;
+
+  padding: 35px;
+
+  background: var(--white);
+  border-radius: 28px;
+
+  box-shadow: 0 12px 30px rgba(38, 34, 40, 0.055);
+
+  transition: var(--transition);
+}
+
+.lonvera-service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 45px rgba(38, 34, 40, 0.1);
+}
+
+.lonvera-service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lonvera-service-top > span {
+  color: rgba(38, 34, 40, 0.28);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+
+.lonvera-service-top > i {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--copper);
+  background: var(--porcelain);
+
+  border-radius: 50%;
+}
+
+.lonvera-service-line {
+  width: 100%;
+  height: 1px;
+
+  margin: 27px 0;
+  background: rgba(111, 91, 74, 0.13);
+}
+
+.lonvera-service-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--aubergine);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.lonvera-service-card p {
+  margin: 0;
+
+  color: var(--sage-grey);
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.lonvera-service-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 23px;
+
+  color: var(--aubergine);
+
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.lonvera-service-card a i {
+  color: var(--copper);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.lonvera-vehicle-quote {
+  padding: 135px 0;
+  background: var(--aubergine);
+}
+
+.lonvera-vehicle-quote-inner {
+  text-align: center;
+}
+
+.lonvera-vehicle-quote-inner > span {
+  color: var(--copper-light);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.lonvera-vehicle-quote blockquote {
+  max-width: 900px;
+
+  margin: 35px auto;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 7vw, 95px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.lonvera-vehicle-quote blockquote em {
+  color: var(--copper-light);
+  font-style: italic;
+}
+
+.lonvera-vehicle-quote-inner > div {
+  width: 50px;
+  height: 1px;
+
+  margin: 30px auto;
+
+  background: var(--copper);
+}
+
+.lonvera-vehicle-quote-inner > p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.lonvera-vehicles-cta {
+  padding: 120px 0;
+}
+
+.lonvera-vehicles-cta-card {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background: var(--copper);
+
+  border-radius: 34px;
+
+  box-shadow: 0 25px 60px rgba(38, 34, 40, 0.12);
+}
+
+.lonvera-vehicles-cta-content {
+  padding: 75px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lonvera-vehicles-cta-content > span {
+  color: var(--aubergine);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.lonvera-vehicles-cta-content h2 {
+  margin: 25px 0;
+
+  color: var(--white);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.lonvera-vehicles-cta-content h2 em {
+  color: var(--aubergine);
+  font-style: italic;
+}
+
+.lonvera-vehicles-cta-content p {
+  max-width: 480px;
+
+  margin: 0 0 28px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.lonvera-vehicles-cta-content .lonvera-rounded-btn {
+  background: var(--aubergine);
+}
+
+.lonvera-vehicles-cta-content .lonvera-rounded-btn i {
+  color: var(--aubergine);
+}
+
+.lonvera-vehicles-cta-image {
+  position: relative;
+  min-height: 620px;
+}
+
+.lonvera-vehicles-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lonvera-vehicles-cta-image > div {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(190, 129, 91, 0.32),
+      transparent 55%
+    );
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes lonveraVehicleHeroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes lonveraVehicleCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-vehicle-grid {
+    gap: 18px;
+  }
+
+  .lonvera-vehicle-content {
+    padding: 22px;
+  }
+
+  .lonvera-vehicle-content h3 {
+    font-size: 32px;
+  }
+
+  .lonvera-vehicle-spec {
+    padding: 0 8px;
+  }
+
+  .lonvera-vehicle-spec strong {
+    font-size: 8px;
+  }
+
+  .lonvera-chauffeur-content {
+    padding: 60px 50px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   2 CARDS
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .lonvera-vehicles-hero,
+  .lonvera-vehicles-hero-content {
+    min-height: 650px;
+  }
+
+  .lonvera-vehicles-intro {
+    padding: 90px 0;
+  }
+
+  .lonvera-vehicles-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .lonvera-vehicles-intro-side {
+    min-height: auto;
+
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lonvera-vehicles-intro-side strong {
+    font-size: 75px;
+  }
+
+  .lonvera-vehicle-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* 2 cards tablet */
+  .lonvera-vehicle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lonvera-vehicle-image {
+    height: 285px;
+  }
+
+  .lonvera-vehicle-content {
+    min-height: 355px;
+  }
+
+  .lonvera-chauffeur-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-chauffeur-image {
+    min-height: 470px;
+  }
+
+  .lonvera-chauffeur-content {
+    padding: 60px;
+  }
+
+  .lonvera-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lonvera-service-card:last-child {
+    grid-column: span 2;
+  }
+
+  .lonvera-vehicles-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-vehicles-cta-image {
+    min-height: 450px;
+  }
+
+  .lonvera-vehicles-cta-content {
+    padding: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE LARGE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .lonvera-vehicles-hero {
+    min-height: 570px;
+  }
+
+  .lonvera-vehicles-hero-content {
+    min-height: 570px;
+    padding-bottom: 65px;
+  }
+
+  .lonvera-vehicles-hero h1 {
+    font-size: 76px;
+  }
+
+  .lonvera-vehicles-hero p {
+    font-size: 14px;
+  }
+
+  .lonvera-vehicles-intro {
+    padding: 75px 0;
+  }
+
+  .lonvera-vehicles-intro-content h2,
+  .lonvera-vehicle-heading h2,
+  .lonvera-services-heading h2 {
+    font-size: 53px;
+  }
+
+  .lonvera-vehicle-collection {
+    padding: 80px 0 90px;
+  }
+
+  .lonvera-vehicle-tabs-track {
+    border-radius: 20px;
+    padding: 6px;
+  }
+
+  .lonvera-vehicle-tab {
+    min-height: 44px;
+    padding: 0 15px;
+    font-size: 9px;
+  }
+
+  .lonvera-vehicle-results {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 20px;
+  }
+
+  /* 1 card mobile */
+  .lonvera-vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-vehicle-image {
+    height: 320px;
+  }
+
+  .lonvera-vehicle-content {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .lonvera-vehicle-content h3 {
+    font-size: 39px;
+  }
+
+  .lonvera-vehicle-specs {
+    margin-top: 22px;
+  }
+
+  .lonvera-chauffeur {
+    padding: 80px 0;
+  }
+
+  .lonvera-chauffeur-image {
+    min-height: 350px;
+  }
+
+  .lonvera-chauffeur-content {
+    padding: 45px 30px;
+  }
+
+  .lonvera-chauffeur-content h2 {
+    font-size: 53px;
+  }
+
+  .lonvera-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-service-card:last-child {
+    grid-column: span 1;
+  }
+
+  .lonvera-service-card {
+    min-height: 280px;
+  }
+
+  .lonvera-vehicle-quote {
+    padding: 90px 0;
+  }
+
+  .lonvera-vehicle-quote blockquote {
+    font-size: 50px;
+  }
+
+  .lonvera-vehicles-cta-content {
+    padding: 45px 30px;
+  }
+
+  .lonvera-vehicles-cta-content h2 {
+    font-size: 54px;
+  }
+
+  .lonvera-vehicles-cta-image {
+    min-height: 350px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .lonvera-vehicles-hero {
+    min-height: 520px;
+  }
+
+  .lonvera-vehicles-hero-content {
+    min-height: 520px;
+    padding-bottom: 55px;
+  }
+
+  .lonvera-vehicles-hero h1 {
+    font-size: 63px;
+  }
+
+  .lonvera-vehicles-hero p br {
+    display: none;
+  }
+
+  .lonvera-vehicles-scroll {
+    font-size: 10px;
+  }
+
+  .lonvera-vehicles-intro {
+    padding: 65px 0;
+  }
+
+  .lonvera-vehicles-intro-side strong {
+    font-size: 60px;
+  }
+
+  .lonvera-vehicles-intro-content h2,
+  .lonvera-vehicle-heading h2,
+  .lonvera-services-heading h2 {
+    font-size: 47px;
+  }
+
+  .lonvera-vehicle-heading > p {
+    font-size: 13px;
+  }
+
+  .lonvera-vehicle-tab {
+    padding: 0 13px;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .lonvera-vehicle-image {
+    height: 285px;
+  }
+
+  .lonvera-vehicle-card {
+    border-radius: 23px;
+  }
+
+  .lonvera-vehicle-number {
+    width: 38px;
+    height: 38px;
+    top: 13px;
+    left: 13px;
+    font-size: 15px;
+  }
+
+  .lonvera-vehicle-category {
+    top: 15px;
+    left: 60px;
+    padding: 9px 11px;
+    font-size: 8px;
+  }
+
+  .lonvera-vehicle-arrow {
+    top: 13px;
+    right: 13px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .lonvera-vehicle-content {
+    padding: 22px;
+  }
+
+  .lonvera-vehicle-content h3 {
+    font-size: 35px;
+  }
+
+  .lonvera-vehicle-subtitle {
+    font-size: 15px;
+  }
+
+  .lonvera-vehicle-specs {
+    border-radius: 13px;
+  }
+
+  .lonvera-vehicle-spec {
+    gap: 7px;
+    padding: 0 8px;
+  }
+
+  .lonvera-vehicle-spec > i {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .lonvera-vehicle-spec small {
+    font-size: 6px;
+  }
+
+  .lonvera-vehicle-spec strong {
+    font-size: 7px;
+  }
+
+  .lonvera-vehicle-card-footer {
+    align-items: flex-end;
+  }
+
+  .lonvera-vehicle-price strong {
+    font-size: 21px;
+  }
+
+  .lonvera-vehicle-enquire {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 8px;
+  }
+
+  .lonvera-vehicle-enquire i {
+    width: 23px;
+    height: 23px;
+  }
+
+  .lonvera-chauffeur-card {
+    border-radius: 25px;
+  }
+
+  .lonvera-chauffeur-image {
+    min-height: 300px;
+  }
+
+  .lonvera-chauffeur-content {
+    padding: 38px 25px;
+  }
+
+  .lonvera-chauffeur-content h2 {
+    font-size: 48px;
+  }
+
+  .lonvera-chauffeur-content > p {
+    font-size: 13px;
+  }
+
+  .lonvera-rounded-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lonvera-service-card {
+    padding: 28px;
+    border-radius: 23px;
+  }
+
+  .lonvera-vehicle-quote blockquote {
+    font-size: 43px;
+  }
+
+  .lonvera-vehicles-cta-card {
+    border-radius: 25px;
+  }
+
+  .lonvera-vehicles-cta-content {
+    padding: 38px 25px;
+  }
+
+  .lonvera-vehicles-cta-content h2 {
+    font-size: 47px;
+  }
+
+  .lonvera-vehicles-cta-content p {
+    font-size: 13px;
+  }
+
+  .lonvera-vehicles-cta-image {
+    min-height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .lonvera-vehicles-hero h1 {
+    font-size: 56px;
+  }
+
+  .lonvera-vehicle-image {
+    height: 255px;
+  }
+
+  .lonvera-vehicle-content h3 {
+    font-size: 32px;
+  }
+
+  .lonvera-vehicle-spec strong {
+    font-size: 6.5px;
+  }
+
+  .lonvera-vehicle-card-footer {
+    gap: 8px;
+  }
+
+  .lonvera-vehicle-enquire {
+    padding: 0 11px;
+  }
+
+  .lonvera-vehicle-price strong {
+    font-size: 19px;
+  }
+
+}
+/* =========================================================
+   VEHICLE REQUEST FORM
+========================================================= */
+
+.lonvera-vehicle-request {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.75fr);
+  gap: 0;
+  margin: 55px 0 70px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.lonvera-vehicle-request-main {
+  padding: 48px;
+  min-width: 0;
+}
+
+.lonvera-vehicle-request-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+
+.lonvera-request-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lonvera-vehicle-request-heading h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.lonvera-vehicle-request-heading h3 em {
+  color: var(--aubergine);
+  font-weight: 500;
+}
+
+.lonvera-vehicle-request-heading p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--sage-grey);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* FORM */
+
+.lonvera-vehicle-request-form {
+  width: 100%;
+}
+
+.lonvera-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+.lonvera-form-field {
+  min-width: 0;
+}
+
+.lonvera-form-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.lonvera-form-field label span {
+  color: var(--copper);
+}
+
+.lonvera-form-field input,
+.lonvera-form-field select,
+.lonvera-form-field textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  outline: none;
+  background: var(--porcelain-light);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.lonvera-form-field input,
+.lonvera-form-field select {
+  height: 52px;
+  padding: 0 15px;
+}
+
+.lonvera-form-field textarea {
+  min-height: 125px;
+  padding: 14px 15px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.lonvera-form-field input::placeholder,
+.lonvera-form-field textarea::placeholder {
+  color: var(--sage-grey);
+  opacity: 0.8;
+}
+
+.lonvera-form-field input:focus,
+.lonvera-form-field select:focus,
+.lonvera-form-field textarea:focus {
+  border-color: var(--copper);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(200, 169, 107, 0.1);
+}
+
+/* DATE / TIME */
+
+.lonvera-input-icon {
+  position: relative;
+}
+
+.lonvera-input-icon input {
+  padding-right: 45px;
+}
+
+.lonvera-input-icon i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: var(--copper);
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* SELECT */
+
+.lonvera-select-wrap {
+  position: relative;
+}
+
+.lonvera-select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 42px;
+  cursor: pointer;
+}
+
+.lonvera-select-wrap i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: var(--copper);
+  font-size: 12px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* MESSAGE */
+
+.lonvera-form-message {
+  margin-top: 22px;
+}
+
+.lonvera-vehicle-request-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-width: 230px;
+  margin-top: 25px;
+  padding: 15px 20px;
+  border: 1px solid var(--aubergine);
+  background: var(--aubergine);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lonvera-vehicle-request-btn i {
+  font-size: 15px;
+}
+
+.lonvera-vehicle-request-btn:hover {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.lonvera-form-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 15px 0 0;
+  color: var(--sage-grey);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.lonvera-form-note i {
+  color: var(--copper);
+}
+
+/* =========================================================
+   POPULAR ROUTES SIDE
+========================================================= */
+
+.lonvera-vehicle-routes {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 38px;
+  background: var(--aubergine);
+  color: var(--white);
+  min-width: 0;
+}
+
+.lonvera-routes-heading {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.lonvera-routes-heading > span {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--copper-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.lonvera-routes-heading h3 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.lonvera-routes-heading h3 em {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+.lonvera-routes-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lonvera-route-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lonvera-route-item span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+}
+
+.lonvera-route-item small {
+  flex-shrink: 0;
+  color: var(--copper-light);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.lonvera-route-note {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 35px;
+}
+
+.lonvera-route-note-icon {
+  display: flex;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(226, 201, 143, 0.35);
+  color: var(--copper-light);
+}
+
+.lonvera-route-note > div:last-child {
+  min-width: 0;
+}
+
+.lonvera-route-note > div:last-child > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--copper-light);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.lonvera-route-note h4 {
+  margin: 0 0 8px;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lonvera-route-note h4 em {
+  color: var(--copper-light);
+}
+
+.lonvera-route-note p {
+  margin: 0 0 13px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.lonvera-route-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.lonvera-route-note a i {
+  color: var(--copper-light);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .lonvera-vehicle-request {
+    grid-template-columns: minmax(0, 1.4fr) minmax(290px, 0.8fr);
+  }
+
+  .lonvera-vehicle-request-main {
+    padding: 40px;
+  }
+
+  .lonvera-vehicle-routes {
+    padding: 40px 30px;
+  }
+
+  .lonvera-vehicle-request-heading {
+    gap: 25px;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .lonvera-vehicle-request {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-vehicle-request-main {
+    padding: 40px;
+  }
+
+  .lonvera-vehicle-routes {
+    padding: 40px;
+  }
+
+  .lonvera-routes-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 25px;
+  }
+
+  .lonvera-route-note {
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .lonvera-vehicle-request {
+    margin: 40px 0 55px;
+  }
+
+  .lonvera-vehicle-request-main {
+    padding: 30px 24px;
+  }
+
+  .lonvera-vehicle-request-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .lonvera-vehicle-request-heading h3 {
+    font-size: 42px;
+  }
+
+  .lonvera-vehicle-request-heading p {
+    max-width: none;
+    margin-top: 18px;
+  }
+
+  .lonvera-form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lonvera-form-message {
+    margin-top: 18px;
+  }
+
+  .lonvera-vehicle-request-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lonvera-vehicle-routes {
+    padding: 32px 24px;
+  }
+
+  .lonvera-routes-heading h3 {
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .lonvera-vehicle-request {
+    margin: 30px 0 45px;
+  }
+
+  .lonvera-vehicle-request-main {
+    padding: 26px 18px;
+  }
+
+  .lonvera-request-label {
+    font-size: 9px;
+  }
+
+  .lonvera-vehicle-request-heading h3 {
+    font-size: 37px;
+  }
+
+  .lonvera-form-field input,
+  .lonvera-form-field select {
+    height: 49px;
+    padding-left: 13px;
+    padding-right: 38px;
+    font-size: 13px;
+  }
+
+  .lonvera-form-field textarea {
+    min-height: 110px;
+    font-size: 13px;
+  }
+
+  .lonvera-form-note {
+    align-items: flex-start;
+  }
+
+  .lonvera-vehicle-routes {
+    padding: 28px 18px;
+  }
+
+  .lonvera-routes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lonvera-route-item {
+    padding: 12px 0;
+  }
+
+  .lonvera-route-note {
+    gap: 12px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .lonvera-vehicle-request-main {
+    padding: 22px 15px;
+  }
+
+  .lonvera-vehicle-request-heading h3 {
+    font-size: 34px;
+  }
+
+  .lonvera-vehicle-routes {
+    padding: 25px 15px;
+  }
+
+  .lonvera-route-note-icon {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .lonvera-vehicle-request-btn {
+    min-width: 0;
+    padding: 14px 15px;
+    font-size: 10px;
+  }
+
+}
+.lonvera-vehicle-request {
+  margin-bottom: 0 !important;
+}
+
+.lonvera-vehicle-collection {
+  padding-top: 35px !important;
+}

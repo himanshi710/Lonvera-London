@@ -1,0 +1,54 @@
+/* =========================================================
+   LONVÉRA — SCROLL TO TOP
+========================================================= */
+
+.lonvera-scroll-top {
+  position: fixed;
+  right: 25px;
+  bottom: 100px;
+  z-index: 9998;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--copper);
+  border-radius: 50%;
+
+  background: var(--porcelain-light);
+  color: var(--aubergine);
+
+  font-size: 14px;
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.lonvera-scroll-top:hover {
+  background: var(--aubergine);
+  color: var(--copper-light);
+
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 767px) {
+  .lonvera-scroll-top {
+    right: 17px;
+    bottom: 84px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 12px;
+  }
+}
