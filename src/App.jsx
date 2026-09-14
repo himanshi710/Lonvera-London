@@ -176,7 +176,7 @@ function App() {
                   seems to have taken a different turn.
                 </p>
 
-                <a href="/">
+                <a href="/Lonvera-London/">
                   Return Home
                   <i className="bi bi-arrow-up-right"></i>
                 </a>
