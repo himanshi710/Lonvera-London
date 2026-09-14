@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lonvera London</title>
     <script>
-      // GitHub Pages SPA redirect: restore the path from the query string
+      // Restore the path that was encoded by 404.html into the query string
       (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
-          });
-          window.history.replaceState(
-            null, null,
-            l.pathname.slice(0, -1) + decoded[0] +
-            (decoded[1] ? '?' + decoded[1] : '') +
-            l.hash
-          );
+        if (l.search[1] === 'p' && l.search[2] === '=') {
+          var decoded = l.search.slice(1).split('&').reduce(function(memo, item) {
+            var parts = item.split('=');
+            memo[parts[0]] = parts.slice(1).join('=').replace(/~and~/g, '&');
+            return memo;
+          }, {});
+          var newPath = l.pathname.replace(/\/$/, '') + (decoded['p'] ? '/' + decoded['p'].replace(/^\//, '') : '');
+          var newSearch = decoded['q'] ? '?' + decoded['q'] : '';
+          window.history.replaceState(null, null, newPath + newSearch + l.hash);
         }
       }(window.location));
     </script>
-    <script type="module" crossorigin src="/Lonvera-London/assets/index-CupT5YNN.js"></script>
+    <script type="module" crossorigin src="/Lonvera-London/assets/index-BvQKx1gE.js"></script>
     <link rel="stylesheet" crossorigin href="/Lonvera-London/assets/index-DiBD_M--.css">
   </head>
   <body>
