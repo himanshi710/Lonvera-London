@@ -1,7 +1,4 @@
-/* =========================================================
-   LONVÉRA — PREMIUM NAVBAR
-   Modern British Editorial Luxury
-========================================================= */
+
 
 .lonvera-navbar {
   position: relative;
@@ -24,7 +21,7 @@
 }
 
 .lonvera-topbar-inner {
-  width: min(100% - 60px, 1440px);
+  width: min(calc(100% - 60px), 1440px);
   height: 100%;
   margin: auto;
 
@@ -93,7 +90,7 @@
   position: relative;
   z-index: 100002;
 
-  width: min(100% - 60px, 1440px);
+  width: min(calc(100% - 60px), 1440px);
   min-height: 112px;
   margin: auto;
 
@@ -119,6 +116,7 @@
   z-index: 100010;
 
   pointer-events: auto;
+  text-decoration: none;
 }
 
 .lonvera-logo-mark {
@@ -126,6 +124,8 @@
 
   width: 68px;
   height: 68px;
+
+  flex: 0 0 68px;
 
   display: flex;
   align-items: center;
@@ -166,6 +166,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .lonvera-logo-content strong {
@@ -175,6 +176,7 @@
   font-weight: 600;
   letter-spacing: 0.13em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .lonvera-logo-content small {
@@ -182,6 +184,7 @@
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.28em;
+  white-space: nowrap;
 }
 
 /* =========================================================
@@ -190,6 +193,7 @@
 
 .lonvera-desktop-nav {
   flex: 1;
+  min-width: 0;
 
   display: flex;
   align-items: center;
@@ -207,6 +211,7 @@
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
 
   height: 112px;
@@ -215,9 +220,13 @@
   color: var(--aubergine);
   background: transparent;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.01em;
+
+  text-decoration: none;
+  white-space: nowrap;
 
   transition:
     color var(--transition-fast),
@@ -268,14 +277,13 @@
 
 .lonvera-more-btn {
   font-family: "DM Sans", sans-serif;
+  border: 0;
+  outline: none;
   cursor: pointer;
-
-  pointer-events: auto !important;
 }
 
 .lonvera-more-btn i {
   font-size: 10px;
-  transition: transform var(--transition-fast);
 }
 
 /* =========================================================
@@ -288,6 +296,8 @@
   right: -160px;
 
   width: 610px;
+  max-width: calc(100vw - 30px);
+
   padding: 17px;
 
   display: grid;
@@ -353,7 +363,7 @@
   min-height: 47px;
 
   display: grid;
-  grid-template-columns: 24px 1fr 18px;
+  grid-template-columns: 24px minmax(0, 1fr) 18px;
   align-items: center;
   gap: 10px;
 
@@ -366,6 +376,8 @@
   font-family: "Playfair Display", serif;
   font-size: 14px;
 
+  text-decoration: none;
+
   transition:
     color var(--transition-fast),
     padding-left var(--transition-fast);
@@ -373,7 +385,7 @@
   position: relative;
   z-index: 100111;
 
-  pointer-events: auto !important;
+  pointer-events: auto;
   cursor: pointer;
 }
 
@@ -414,6 +426,8 @@
 }
 
 .lonvera-dropdown-image img {
+  display: block;
+
   width: 100%;
   height: 100%;
   min-height: 335px;
@@ -457,7 +471,7 @@
 }
 
 .lonvera-dropdown-overlay h3 {
-  margin-bottom: 7px;
+  margin: 0 0 7px;
 
   color: var(--white);
   font-size: 27px;
@@ -496,11 +510,14 @@
   z-index: 100201;
 
   pointer-events: auto;
+  text-decoration: none;
 }
 
 .lonvera-action-icon {
   width: 40px;
   height: 40px;
+
+  flex: 0 0 40px;
 
   display: flex;
   align-items: center;
@@ -554,6 +571,7 @@
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 
   background: var(--aubergine);
@@ -566,15 +584,18 @@
   letter-spacing: 0.04em;
   white-space: nowrap;
 
+  text-decoration: none;
+
   transition:
     background var(--transition-fast),
+    color var(--transition-fast),
     transform var(--transition-fast),
     box-shadow var(--transition-fast);
 
   z-index: 100210;
 
-  pointer-events: auto !important;
-  cursor: pointer !important;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .lonvera-nav-cta span,
@@ -616,7 +637,7 @@
 }
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   MOBILE BUTTON
 ========================================================= */
 
 .lonvera-menu-toggle {
@@ -624,6 +645,8 @@
 
   width: 46px;
   height: 46px;
+
+  flex: 0 0 46px;
 
   align-items: center;
   justify-content: center;
@@ -652,27 +675,46 @@
 }
 
 /* =========================================================
-   TABLET
+   LARGE LAPTOP
+   1250px
 ========================================================= */
 
 @media (max-width: 1250px) {
 
   .lonvera-nav-inner {
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .lonvera-logo {
+    gap: 10px;
+  }
+
+  .lonvera-logo-mark {
+    width: 60px;
+    height: 60px;
+    flex-basis: 60px;
   }
 
   .lonvera-logo-content strong {
     font-size: 23px;
   }
 
-  .lonvera-logo-mark {
-    width: 60px;
-    height: 60px;
+  .lonvera-logo-content small {
+    font-size: 7px;
+  }
+
+  .lonvera-desktop-nav {
+    margin-left: 5px;
   }
 
   .lonvera-nav-link {
-    padding: 0 10px;
+    padding: 0 9px;
     font-size: 12px;
+  }
+
+  .lonvera-nav-link::after {
+    left: 9px;
+    right: 9px;
   }
 
   .lonvera-contact-action {
@@ -689,7 +731,8 @@
 }
 
 /* =========================================================
-   MOBILE
+   TABLET / MOBILE
+   991px
 ========================================================= */
 
 @media (max-width: 991px) {
@@ -699,9 +742,10 @@
   }
 
   .lonvera-topbar-inner {
-    width: min(100% - 28px, 700px);
+    width: min(calc(100% - 28px), 700px);
 
     display: flex;
+    align-items: center;
     justify-content: center;
   }
 
@@ -714,22 +758,25 @@
     display: none;
   }
 
-  .lonvera-nav-wrap {
-    z-index: 100001;
-  }
+  /* MAIN NAV */
 
   .lonvera-nav-inner {
-    width: min(100% - 28px, 700px);
+    width: min(calc(100% - 28px), 700px);
     min-height: 82px;
 
     justify-content: space-between;
 
-    z-index: 100002;
+    gap: 15px;
+  }
+
+  .lonvera-logo {
+    min-width: 0;
   }
 
   .lonvera-logo-mark {
     width: 54px;
     height: 54px;
+    flex-basis: 54px;
   }
 
   .lonvera-logo-mark span {
@@ -767,6 +814,7 @@
     right: 0;
 
     max-height: calc(100vh - 118px);
+    overflow-x: hidden;
     overflow-y: auto;
 
     background: var(--aubergine);
@@ -798,7 +846,7 @@
   }
 
   .lonvera-mobile-inner {
-    width: min(100% - 36px, 600px);
+    width: min(calc(100% - 36px), 600px);
     margin: auto;
     padding: 30px 0 35px;
 
@@ -806,9 +854,7 @@
     z-index: 100501;
   }
 
-  /* =======================================================
-     MOBILE LOGO
-  ======================================================= */
+  /* MOBILE LOGO */
 
   .lonvera-mobile-logo {
     display: flex;
@@ -832,9 +878,11 @@
     color: var(--white);
   }
 
-  /* =======================================================
-     MOBILE LINKS
-  ======================================================= */
+  .lonvera-mobile-logo .lonvera-logo-content small {
+    color: var(--copper-light);
+  }
+
+  /* MOBILE LINKS */
 
   .lonvera-mobile-links {
     display: flex;
@@ -860,19 +908,21 @@
     background: transparent;
     color: var(--porcelain);
 
+    border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
     font-family: "Playfair Display", serif;
     font-size: 18px;
     text-align: left;
+    text-decoration: none;
 
     transition: color var(--transition-fast);
 
     position: relative;
     z-index: 100511;
 
-    pointer-events: auto !important;
-    cursor: pointer !important;
+    pointer-events: auto;
+    cursor: pointer;
   }
 
   .lonvera-mobile-links > a:hover,
@@ -903,7 +953,7 @@
   }
 
   .lonvera-mobile-submenu.show {
-    max-height: 500px;
+    max-height: 600px;
   }
 
   .lonvera-mobile-submenu a {
@@ -912,30 +962,30 @@
     display: flex;
     align-items: center;
 
-    padding-left: 18px;
+    padding: 0 10px 0 18px;
 
     color: var(--sage-light);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
     font-size: 13px;
+    text-decoration: none;
 
     transition:
       color var(--transition-fast),
       padding-left var(--transition-fast);
 
-    pointer-events: auto !important;
-    cursor: pointer !important;
+    pointer-events: auto;
+    cursor: pointer;
   }
 
-  .lonvera-mobile-submenu a:hover {
+  .lonvera-mobile-submenu a:hover,
+  .lonvera-mobile-submenu a.active {
     padding-left: 25px;
     color: var(--copper-light);
   }
 
-  /* =======================================================
-     MOBILE CONTACT
-  ======================================================= */
+  /* MOBILE CONTACT */
 
   .lonvera-mobile-contact-row {
     display: grid;
@@ -961,13 +1011,17 @@
 
     color: var(--porcelain);
 
-    pointer-events: auto !important;
-    cursor: pointer !important;
+    text-decoration: none;
+
+    pointer-events: auto;
+    cursor: pointer;
   }
 
   .lonvera-mobile-contact-row a span {
     width: 34px;
     height: 34px;
+
+    flex: 0 0 34px;
 
     display: flex;
     align-items: center;
@@ -984,9 +1038,7 @@
     font-weight: 600;
   }
 
-  /* =======================================================
-     MOBILE CTA
-  ======================================================= */
+  /* MOBILE CTA */
 
   .lonvera-mobile-cta {
     min-height: 54px;
@@ -1006,17 +1058,18 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    text-decoration: none;
 
     position: relative;
     z-index: 100540;
 
-    pointer-events: auto !important;
-    cursor: pointer !important;
+    pointer-events: auto;
+    cursor: pointer;
   }
 
-  .lonvera-mobile-cta span,
-  .lonvera-mobile-cta i {
-    pointer-events: none;
+  .lonvera-mobile-cta:hover {
+    color: var(--white);
+    background: var(--copper);
   }
 
   .lonvera-mobile-cta i {
@@ -1025,22 +1078,61 @@
 }
 
 /* =========================================================
+   TABLET PORTRAIT
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .lonvera-nav-inner {
+    min-height: 78px;
+  }
+
+  .lonvera-mobile-menu {
+    max-height: calc(100vh - 114px);
+  }
+
+  .lonvera-mobile-inner {
+    padding-top: 26px;
+  }
+}
+
+/* =========================================================
    SMALL MOBILE
+   575px
 ========================================================= */
 
 @media (max-width: 575px) {
 
+  .lonvera-topbar {
+    height: 34px;
+  }
+
   .lonvera-nav-inner {
+    width: calc(100% - 28px);
     min-height: 74px;
+  }
+
+  .lonvera-logo {
+    gap: 9px;
   }
 
   .lonvera-logo-mark {
     width: 48px;
     height: 48px;
+    flex-basis: 48px;
+  }
+
+  .lonvera-logo-mark::before {
+    inset: 4px;
   }
 
   .lonvera-logo-mark span {
     font-size: 21px;
+  }
+
+  .lonvera-logo-content {
+    gap: 3px;
   }
 
   .lonvera-logo-content strong {
@@ -1056,11 +1148,21 @@
   .lonvera-menu-toggle {
     width: 42px;
     height: 42px;
+    flex-basis: 42px;
     font-size: 19px;
   }
 
+  .lonvera-mobile-menu {
+    max-height: calc(100vh - 108px);
+  }
+
   .lonvera-mobile-inner {
-    width: min(100% - 28px, 600px);
+    width: calc(100% - 28px);
+    padding: 24px 0 28px;
+  }
+
+  .lonvera-mobile-logo {
+    padding-bottom: 20px;
   }
 
   .lonvera-mobile-links > a,
@@ -1071,35 +1173,144 @@
 
   .lonvera-mobile-contact-row {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lonvera-mobile-contact-row a {
+    min-height: 56px;
+  }
+
+  .lonvera-mobile-cta {
+    min-height: 52px;
   }
 }
 
 /* =========================================================
-   FINAL CLICK SAFETY
-   No visual design changes
+   EXTRA SMALL MOBILE
+   400px
 ========================================================= */
 
-.lonvera-nav-cta,
-.lonvera-nav-cta *,
-.lonvera-dropdown-links a,
-.lonvera-mobile-cta,
-.lonvera-mobile-cta *,
-.lonvera-mobile-submenu a {
+@media (max-width: 400px) {
+
+  .lonvera-nav-inner {
+    width: calc(100% - 22px);
+  }
+
+  .lonvera-logo {
+    gap: 7px;
+  }
+
+  .lonvera-logo-mark {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .lonvera-logo-mark span {
+    font-size: 19px;
+  }
+
+  .lonvera-logo-content strong {
+    font-size: 16px;
+    letter-spacing: 0.08em;
+  }
+
+  .lonvera-logo-content small {
+    font-size: 5.5px;
+    letter-spacing: 0.16em;
+  }
+
+  .lonvera-menu-toggle {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .lonvera-mobile-inner {
+    width: calc(100% - 22px);
+  }
+
+  .lonvera-mobile-links > a,
+  .lonvera-mobile-more {
+    min-height: 51px;
+    font-size: 16px;
+  }
+
+  .lonvera-mobile-submenu a {
+    min-height: 43px;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 991px) and (orientation: landscape) {
+
+  .lonvera-mobile-menu {
+    max-height: calc(100vh - 100px);
+  }
+
+  .lonvera-mobile-inner {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+
+  .lonvera-mobile-logo {
+    padding-bottom: 15px;
+  }
+
+  .lonvera-mobile-links {
+    margin-top: 8px;
+  }
+
+  .lonvera-mobile-links > a,
+  .lonvera-mobile-more {
+    min-height: 46px;
+  }
+
+  .lonvera-mobile-contact-row {
+    margin-top: 15px;
+  }
+}
+
+/* =========================================================
+   GLOBAL NAVBAR RESET
+   Keeps navbar independent from other components
+========================================================= */
+
+.lonvera-navbar a,
+.lonvera-navbar button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.lonvera-nav-cta {
-  pointer-events: auto !important;
+.lonvera-navbar a {
+  text-decoration: none;
 }
 
-.lonvera-dropdown-links a {
-  pointer-events: auto !important;
+.lonvera-navbar button {
+  outline: none;
 }
 
-.lonvera-mobile-cta {
-  pointer-events: auto !important;
+.lonvera-navbar a:focus-visible,
+.lonvera-navbar button:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
 }
 
-.lonvera-mobile-submenu a {
-  pointer-events: auto !important;
+/* =========================================================
+   IMAGE SAFETY
+========================================================= */
+
+.lonvera-navbar img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.lonvera-navbar,
+.lonvera-navbar * {
+  box-sizing: border-box;
 }

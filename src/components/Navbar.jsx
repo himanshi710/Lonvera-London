@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -18,7 +19,9 @@ function Navbar() {
   return (
     <header className="lonvera-navbar">
 
-      {/* TOP INFORMATION BAR */}
+      {/* =====================================================
+          TOP INFORMATION BAR
+      ===================================================== */}
       <div className="lonvera-topbar">
         <div className="lonvera-topbar-inner">
 
@@ -42,7 +45,9 @@ function Navbar() {
         </div>
       </div>
 
-      {/* MAIN NAVBAR */}
+      {/* =====================================================
+          MAIN NAVBAR
+      ===================================================== */}
       <div className="lonvera-nav-wrap">
         <div className="lonvera-nav-inner">
 
@@ -62,35 +67,24 @@ function Navbar() {
             </span>
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
+          {/* =================================================
+              DESKTOP NAVIGATION
+          ================================================= */}
           <nav className="lonvera-desktop-nav">
 
-            <NavLink
-              to="/"
-              end
-              className={navClass}
-            >
+            <NavLink to="/" end className={navClass}>
               Home
             </NavLink>
 
-            <NavLink
-              to="/about"
-              className={navClass}
-            >
+            <NavLink to="/about" className={navClass}>
               About
             </NavLink>
 
-            <NavLink
-              to="/destinations"
-              className={navClass}
-            >
+            <NavLink to="/destinations" className={navClass}>
               Destinations
             </NavLink>
 
-            <NavLink
-              to="/experiences"
-              className={navClass}
-            >
+            <NavLink to="/experiences" className={navClass}>
               Experiences
             </NavLink>
 
@@ -99,27 +93,25 @@ function Navbar() {
 
               <button
                 type="button"
-                className={`lonvera-nav-link lonvera-more-btn ${
-                  moreOpen ? "active" : ""
-                }`}
+                className={`lonvera-nav-link lonvera-more-btn ${moreOpen ? "active" : ""
+                  }`}
                 onClick={() => setMoreOpen(!moreOpen)}
+                aria-expanded={moreOpen}
               >
                 <span>More</span>
 
                 <i
-                  className={`bi ${
-                    moreOpen
+                  className={`bi ${moreOpen
                       ? "bi-chevron-up"
                       : "bi-chevron-down"
-                  }`}
+                    }`}
                 ></i>
               </button>
 
               {/* DROPDOWN */}
               <div
-                className={`lonvera-dropdown ${
-                  moreOpen ? "show" : ""
-                }`}
+                className={`lonvera-dropdown ${moreOpen ? "show" : ""
+                  }`}
               >
 
                 <div className="lonvera-dropdown-links">
@@ -160,11 +152,7 @@ function Navbar() {
                     <i className="bi bi-arrow-up-right"></i>
                   </Link>
 
-                  {/* CONTACT */}
-                  <Link
-                    to="/contact"
-                    onClick={closeMenu}
-                  >
+                  <Link to="/contact" onClick={closeMenu}>
                     <i className="bi bi-envelope"></i>
                     <span>Contact</span>
                     <i className="bi bi-arrow-up-right"></i>
@@ -201,10 +189,11 @@ function Navbar() {
 
           </nav>
 
-          {/* RIGHT ACTIONS */}
+          {/* =================================================
+              RIGHT ACTIONS
+          ================================================= */}
           <div className="lonvera-nav-actions">
 
-            {/* CALL */}
             <a
               href="tel:+919876543210"
               className="lonvera-contact-action"
@@ -220,7 +209,6 @@ function Navbar() {
               </span>
             </a>
 
-            {/* WHATSAPP */}
             <a
               href="https://wa.me/919876543210"
               target="_blank"
@@ -238,7 +226,6 @@ function Navbar() {
               </span>
             </a>
 
-            {/* PLAN YOUR LONDON → CONTACT PAGE */}
             <Link
               to="/contact"
               className="lonvera-nav-cta"
@@ -254,30 +241,37 @@ function Navbar() {
           <button
             type="button"
             className="lonvera-menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+              if (menuOpen) {
+                setMoreOpen(false);
+              }
+            }}
             aria-label="Open navigation"
+            aria-expanded={menuOpen}
           >
             <i
-              className={`bi ${
-                menuOpen
+              className={`bi ${menuOpen
                   ? "bi-x-lg"
                   : "bi-list"
-              }`}
+                }`}
             ></i>
           </button>
 
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* =====================================================
+          MOBILE MENU
+      ===================================================== */}
       <div
-        className={`lonvera-mobile-menu ${
-          menuOpen ? "open" : ""
-        }`}
+        className={`lonvera-mobile-menu ${menuOpen ? "open" : ""
+          }`}
       >
 
         <div className="lonvera-mobile-inner">
 
+          {/* MOBILE LOGO */}
           <div className="lonvera-mobile-logo">
 
             <span className="lonvera-logo-mark">
@@ -291,6 +285,7 @@ function Navbar() {
 
           </div>
 
+          {/* MOBILE LINKS */}
           <div className="lonvera-mobile-links">
 
             <NavLink
@@ -327,22 +322,22 @@ function Navbar() {
               type="button"
               className="lonvera-mobile-more"
               onClick={() => setMoreOpen(!moreOpen)}
+              aria-expanded={moreOpen}
             >
               <span>More</span>
 
               <i
-                className={`bi ${
-                  moreOpen
+                className={`bi ${moreOpen
                     ? "bi-chevron-up"
                     : "bi-chevron-down"
-                }`}
+                  }`}
               ></i>
             </button>
 
+            {/* MOBILE SUBMENU */}
             <div
-              className={`lonvera-mobile-submenu ${
-                moreOpen ? "show" : ""
-              }`}
+              className={`lonvera-mobile-submenu ${moreOpen ? "show" : ""
+                }`}
             >
 
               <Link to="/tours" onClick={closeMenu}>
@@ -369,12 +364,8 @@ function Navbar() {
                 Vehicles
               </Link>
 
-              {/* CONTACT */}
-             <Link
-  to="/contact"
-  className="lonvera-nav-cta"
-  onClick={closeMenu}
->
+              <Link to="/contact" onClick={closeMenu}>
+                Contact
               </Link>
 
             </div>
@@ -404,7 +395,7 @@ function Navbar() {
 
           </div>
 
-          {/* MOBILE PLAN YOUR LONDON → CONTACT PAGE */}
+          {/* MOBILE CTA */}
           <Link
             to="/contact"
             className="lonvera-mobile-cta"
@@ -415,7 +406,6 @@ function Navbar() {
           </Link>
 
         </div>
-
       </div>
 
     </header>
@@ -423,3 +413,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
